@@ -155,11 +155,11 @@ body:not(.is-mobile) {
   .app-container {
     transition: var(--anim-duration-moderate);
     align-items: center;
+    background: var(--background-secondary);
   }
 
-  &:not(.is-translucent) .workspace,
   .workspace-fake-target-overlay {
-    background: var(--background-secondary);
+    background: transparent;
   }
 
   .workspace-split {

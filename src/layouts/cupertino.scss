@@ -132,6 +132,9 @@ body.layout-fusion:not(.is-mobile) {
     height: stretch;
     overflow: hidden;
   }
+  &.status-bar-full .mod-sidedock.mod-left-split {
+    margin-bottom: 0;
+  }
 
   &:not(.tab-top-left-stacked) .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
     padding-block: 0px;
