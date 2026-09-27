@@ -304,12 +304,6 @@ body:is(.layout-cupertino, .layout-macos, .layout-fusion).is-mobile .workspace-d
 }
 
 // Pixel Banner https://github.com/jparkerweb/pixel-banner
-body:not(.is-phone) .pixel-banner {
-  > .markdown-source-view > .cm-editor:first-child .pixel-banner-image,
-  > .markdown-reading-view > .markdown-preview-view:first-child > .pixel-banner-image {
-    top: var(--view-header-height, var(--header-height));
-  }
-}
 body.is-phone.is-mobile .pixel-banner {
   .select-image-icon {
     display: none;
