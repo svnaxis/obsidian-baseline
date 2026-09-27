@@ -688,7 +688,7 @@ body.is-tablet {
 
     &.is-pinned {
       flex-shrink: 0;
-      max-width: 35%;
+      max-width: 50%;
     }
     &.is-pinned > .workspace-leaf-resize-handle:not(:hover) {
       border-color: transparent;
