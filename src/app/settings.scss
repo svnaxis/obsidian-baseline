@@ -51,24 +51,25 @@ body.mod-macos:not(.is-mobile) .mod-settings {
 body:not(.is-mobile).is-popout-modal .modal {
   animation: none !important;
 }
-body.mod-macos.is-frameless:not(.is-mobile).is-popout-modal {
+body.is-frameless:not(.is-mobile).is-popout-modal {
   --titlebar-height: 40px;
   --traffic-lights-offset-x: 48px;
   --traffic-lights-offset-y: 56px;
 
-  padding-top: 0px;
+  padding-top: 0px !important;
 
   .titlebar {
     background-color: transparent;
     border: none;
+    z-index: 1;
   }
-  .titlebar-inner {
+  .titlebar-text {
     display: none;
   }
   .modal.mod-sidebar-layout {
     -webkit-app-region: unset;
   }
-  .vertical-tab-header {
+  &.mod-macos .vertical-tab-header {
     padding-top: var(--titlebar-height);
   }
 
