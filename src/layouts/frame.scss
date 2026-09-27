@@ -20,6 +20,10 @@ body.layout-frame:not(.is-mobile) {
     border-radius: 0;
   }
 
+  &.hover-ribbon .workspace-ribbon {
+    height: fit-content;
+  }
+
   // macOS fix
   &.mod-macos.is-hidden-frameless {
     &.show-ribbon {
@@ -29,9 +33,6 @@ body.layout-frame:not(.is-mobile) {
       --ribbon-width: 80px;
       margin-top: 0;
       padding-top: var(--header-height);
-    }
-    &.hover-ribbon .workspace-ribbon {
-      height: fit-content;
     }
   }
 

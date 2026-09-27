@@ -111,6 +111,9 @@ body:not(.is-mobile).hover-ribbon.show-ribbon {
     opacity: 1;
     transform: none;
   }
+  .workspace-ribbon.is-collapsed:hover {
+    background: linear-gradient(to right, var(--background-primary) 50%, transparent);
+  }
 
   .workspace-ribbon:hover + .mod-sidedock {
     padding-left: calc(var(--ribbon-width) - 8px);
