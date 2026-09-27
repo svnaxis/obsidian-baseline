@@ -39,14 +39,16 @@
     --h4-line-height: var(--line-height-normal);
 
     --code-border-width: var(--border-width);
+    --code-radius: var(--radius-s);
     --code-size: var(--font-smallest);
+
+    --image-radius: var(--radius-s);
 
     --embed-padding: 16px;
     --embed-max-height: none;
     --embed-background: var(--background-primary-alt);
+    --embed-radius: var(--radius-s);
     --embed-border-start: var(--embed-border-thickness, 2px) solid var(--embed-border-color, var(--background-modifier-border-focus));
-
-    --media-radius: var(--radius-s);
 
     --checkbox-radius: 4px;
 
@@ -269,7 +271,7 @@
     --embed-padding: 16px;
 
     .markdown-embed:not(.image-embed, .canvas-node-content) {
-      border-radius: var(--media-radius);
+      border-radius: var(--embed-radius);
     }
   }
   .embed-hide-title .embed-title,
@@ -285,8 +287,8 @@
     flex-direction: column;
     max-height: var(--embed-max-height);
     overflow: hidden;
-    border-start-end-radius: var(--media-radius);
-    border-end-end-radius: var(--media-radius);
+    border-start-end-radius: var(--embed-radius);
+    border-end-end-radius: var(--embed-radius);
   }
   .inline-embed > .markdown-embed-title {
     padding-bottom: var(--inline-title-margin-bottom);
@@ -434,7 +436,7 @@
   video,
   .file-embed {
     corner-shape: var(--corner-shape);
-    border-radius: var(--media-radius);
+    border-radius: var(--image-radius);
   }
 
   .image-embed {
@@ -443,7 +445,7 @@
   }
 
   body.img-radius-off {
-    --media-radius: 0px;
+    --image-radius: 0px;
   }
 
   body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .markdown-preview-sizer,
