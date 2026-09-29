@@ -64,25 +64,6 @@ body.is-mobile {
     --interactive-hover: color-mix(in srgb, var(--interactive-normal), black 5%);
   }
 
-  // Adaptive font size
-  &:not(.mod-macos):not(.dynamic-type-off) {
-    --font-ui-smaller: calc(12px + var(--font-ui-modifier));
-    --font-ui-small: calc(14px + var(--font-ui-modifier));
-    --font-ui-medium: calc(16px + var(--font-ui-modifier));
-    --font-ui-large: calc(24px + var(--font-ui-modifier));
-
-    .markdown-preview-view,
-    .markdown-source-view {
-      font-size: calc(var(--font-text-size) * 1.0625);
-    }
-  }
-  &.mod-macos:not(.dynamic-type-off) {
-    --font-ui-smaller: calc(13px + var(--font-ui-modifier));
-    --font-ui-small: calc(15px + var(--font-ui-modifier));
-    --font-ui-medium: calc(17px + var(--font-ui-modifier));
-    --font-ui-large: calc(20px + var(--font-ui-modifier));
-  }
-
   // Non-Liquid Glass
   &:not(.input-cupertino) {
     --raised: none;

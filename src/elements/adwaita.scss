@@ -13,16 +13,6 @@ body.input-adwaita {
   --radius-xl: calc(18px * var(--radius-modifier));
   --button-radius: var(--radius-s);
 
-  &.mod-linux:not(.dynamic-type-off) {
-    --font-ui-smaller: calc(var(--font-ui-medium) * 0.82 + var(--font-ui-modifier));
-    --font-ui-small: calc(11px + var(--font-ui-modifier));
-    --font-ui-medium: calc(11px + var(--font-ui-modifier));
-    --font-ui-large: calc(var(--font-ui-medium) * 1.36 + var(--font-ui-modifier));
-
-    --icon-m: calc(18px * var(--radius-modifier));
-    --icon-l: calc(18px * var(--radius-modifier));
-  }
-
   // Button
   button:where(:not(.clickable-icon, .ant-switch, .workspace-leaf-content:not([data-type="markdown"]) button, .copy-code-button)) {
     padding: 5px 17px;
