@@ -3,7 +3,7 @@ body:is(.layout-classic, .layout-minimal) .mod-root .workspace-tab-container {
 }
 
 body:is(.layout-classic, .layout-minimal):not(.is-mobile) {
-  --titlebar-border-width: 1px;
+  --titlebar-border-width: var(--border-width);
 
   &.mod-macos.is-frameless:not(.is-hidden-frameless) {
     --titlebar-height: 38px;
@@ -37,7 +37,7 @@ body:is(.layout-classic, .layout-minimal):not(.is-mobile) {
 
   // Status bar
   &.status-bar-full {
-    --status-bar-border-width: 1px 0 0 0;
+    --status-bar-border-width: var(--border-width) 0 0 0;
   }
 }
 

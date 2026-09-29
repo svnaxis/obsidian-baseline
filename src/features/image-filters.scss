@@ -77,14 +77,14 @@ span[src$="#round"] img:not(.emoji) {
 img[src$="#outline"],
 div[src$="#outline"] img,
 span[src$="#outline"] img {
-  border: 1px solid var(--background-modifier-border);
+  border: var(--border-width) solid var(--background-modifier-border);
 }
 
 /* Interface */
 img[src$="#interface"],
 div[src$="#interface"],
 span[src$="#interface"] img {
-  border: 1px solid var(--background-modifier-border);
+  border: var(--border-width) solid var(--background-modifier-border);
   box-shadow: var(--shadow-l);
   border-radius: var(--radius-m);
 }

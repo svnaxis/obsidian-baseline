@@ -71,7 +71,7 @@ input[type="checkbox"][data-task]:checked {
 input[data-task="/"]:checked,
 li[data-task="/"] > input:checked,
 li[data-task="/"] > p > input:checked {
-  border: 1px solid var(--interactive-accent);
+  border: var(--border-width) solid var(--interactive-accent);
   background: linear-gradient(to right, var(--interactive-accent) 50%, transparent 50%);
   &::after {
     display: none;

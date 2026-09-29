@@ -113,7 +113,7 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
     .mod-root
     .workspace-tabs:not(.mod-stacked)
     .workspace-tab-header {
-    margin-bottom: 1px;
+    margin-bottom: var(--border-width);
 
     &.is-active {
       border-color: var(--tab-text-color-focused-active);

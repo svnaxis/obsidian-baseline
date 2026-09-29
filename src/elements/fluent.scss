@@ -118,7 +118,7 @@ body.input-fluent {
   .checkbox-container {
     &:not(.is-enabled) {
       --toggle-thumb-color: var(--text-muted);
-      outline: 1px solid var(--text-faint);
+      outline: var(--border-width) solid var(--text-faint);
       background-color: var(--color-base-25);
     }
     &:hover {
@@ -219,7 +219,7 @@ body.input-fluent:not(.is-mobile) {
     .nav-action-button.is-active {
       background-color: var(--interactive-normal);
       color: var(--icon-color);
-      box-shadow: inset 0 0 0 1px var(--background-modifier-hover);
+      box-shadow: inset 0 0 0 var(--border-width) var(--background-modifier-hover);
 
       &::after {
         position: absolute;

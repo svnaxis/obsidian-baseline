@@ -91,17 +91,6 @@ body.input-cupertino {
     --nav-item-padding: calc(16px * var(--density-modifier)) var(--side-padding);
   }
 
-  &.is-tablet {
-    &.theme-light {
-      --shadow-surface:
-        inset 1px 1px 2px hsl(0 0% 100% / 0.5), inset -1px -1px 2px hsl(0 0% 100% / 0.5), inset 0 4px 16px hsl(0 0% 100% / 0.025), 0 0 1px hsl(0 0% 0% / 0.25),
-        0 8px 16px 0 hsl(0 0% 0% / 0.05);
-    }
-    &.theme-dark {
-      --shadow-surface: 0 0 1px hsl(0 0% 100% / 0.3), 0 0 1px hsl(0 0% 100% / 0.5);
-    }
-  }
-
   // Button
   button:where(:not(.clickable-icon, .ant-switch, .workspace-leaf-content:not([data-type="markdown"]) button, .copy-code-button)) {
     padding: 4px 12px;
