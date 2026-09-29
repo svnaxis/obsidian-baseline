@@ -69,7 +69,7 @@ body.is-mobile {
     --raised: none;
 
     .mobile-navbar {
-      background-color: color-mix(in srgb, var(--background-secondary) var(--blur-opacity-s), transparent) !important;
+      background-color: color-mix(in srgb, var(--background-secondary) var(--blur-opacity-m), transparent) !important;
       backdrop-filter: var(--blur-m);
     }
   }
@@ -153,6 +153,7 @@ body.is-mobile {
     .search-input-container {
       --background-modifier-form-field: inherit;
       --background-modifier-form-field-hover: inherit;
+      --search-input-radius: var(--input-radius);
     }
     .search-input-container input {
       border-width: var(--border-width);
@@ -475,7 +476,7 @@ body.is-phone {
     border-radius: 100%;
     width: var(--touch-size-l);
     height: var(--touch-size-l);
-    background-color: color-mix(in srgb, var(--background-secondary) var(--blur-opacity-s), transparent);
+    background-color: color-mix(in srgb, var(--background-secondary) var(--blur-opacity-m), transparent);
     backdrop-filter: var(--blur-m);
   }
   &.mod-toolbar-open:not(.mode-switcher-off) .mod-root .workspace-leaf-content[data-type="markdown"] .view-actions button:nth-last-child(2) {

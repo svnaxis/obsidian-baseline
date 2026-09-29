@@ -45,7 +45,7 @@ body.is-phone {
     }
     .prompt-input-container {
       width: auto;
-      margin: auto var(--keyboard-spacing) var(--keyboard-spacing);
+      margin: auto var(--safe-area-inset-side) var(--keyboard-spacing);
     }
     .prompt-input {
       border: none;
