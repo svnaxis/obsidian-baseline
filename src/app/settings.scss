@@ -196,6 +196,7 @@ body:not(.is-phone) {
 body.is-phone {
   .modal.mod-sidebar-layout {
     --modal-header-height: calc(var(--modal-header-inset-top) + var(--touch-size-m) + var(--modal-header-inset-top)) !important;
+    --modal-header-inset-top: 12px;
     box-shadow: none;
 
     .modal-header {
