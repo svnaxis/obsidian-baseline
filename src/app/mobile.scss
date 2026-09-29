@@ -53,6 +53,8 @@ body.is-mobile {
   --mobile-left-sidebar-width-pinned: 300px;
   --mobile-right-sidebar-width-pinned: 300px;
 
+  --vault-profile-order: 0;
+
   // Default override
   &.theme-dark {
     --setting-items-background: var(--background-secondary-alt);
@@ -90,11 +92,8 @@ body.is-mobile {
     }
 
     .workspace-drawer-header {
-      padding-top: 8px;
-      padding-inline: var(--safe-area-inset-side);
-      z-index: 1;
-      min-height: var(--touch-size-m);
-      box-sizing: content-box;
+      padding-top: 12px;
+      padding-inline: 24px;
     }
     .workspace-drawer-header-name-text {
       font-family: var(--h1-font);
@@ -123,6 +122,7 @@ body.is-mobile {
     }
     .workspace-drawer-tab-options .workspace-tab-header-inner {
       padding: calc(12px * var(--density-modifier)) 16px;
+      height: var(--touch-size-m);
       font-weight: var(--font-normal);
     }
     .workspace-drawer-tab-options .workspace-drawer-tab-select .workspace-tab-header-inner {
@@ -272,11 +272,8 @@ body.is-phone {
     justify-content: flex-end;
   }
   .workspace-drawer-header-left {
-    position: absolute;
     flex-direction: row;
     align-items: center;
-    margin: 8px;
-    inset: var(--safe-area-inset-top) var(--safe-area-inset-side) auto;
     gap: 8px;
   }
   .workspace-drawer-header-name {
@@ -289,11 +286,11 @@ body.is-phone {
     color: var(--text-faint);
     white-space: nowrap;
   }
+  .workspace-drawer-header-icon {
+    position: absolute;
+    bottom: max(0px, calc(max(var(--safe-area-inset-bottom), var(--size-4-4)) - var(--keyboard-height)));
+  }
   .workspace-drawer-tab-options {
-    position: fixed;
-    bottom: var(--navbar-bottom-offset);
-    z-index: 2;
-    width: stretch;
     margin-inline: var(--safe-area-inset-side);
     height: var(--touch-size-m);
   }
@@ -338,9 +335,6 @@ body.is-phone {
       black calc(100% - 16px),
       transparent
     );
-  }
-  .workspace-drawer-inner {
-    padding-top: calc(var(--safe-area-inset-top) + 32px);
   }
 
   // Editor panel
