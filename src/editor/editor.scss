@@ -118,12 +118,6 @@
     padding: 0 8px;
     flex-shrink: 0;
   }
-  .view-header-nav-buttons,
-  .view-actions {
-    --icon-size: var(--icon-m);
-    --icon-stroke: var(--icon-m-stroke-width);
-    gap: 0 !important;
-  }
   .view-header-title-container {
     height: auto !important;
   }

@@ -32,6 +32,9 @@ body {
       gap: 4px;
       flex-direction: column;
     }
+    .setting-item-name {
+      overflow: visible;
+    }
     .setting-item-description {
       padding-top: 0;
     }
@@ -46,6 +49,7 @@ body {
 body.mod-macos:not(.is-mobile) .mod-settings {
   --dropdown-background: var(--interactive-normal);
   --dropdown-icon-background: transparent;
+  --dropdown-text-align: start;
 }
 
 // Popout modal (Settings)

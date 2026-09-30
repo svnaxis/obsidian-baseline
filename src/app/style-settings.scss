@@ -1217,7 +1217,7 @@ settings:
 				value: tab-right-compact
 	-
 		id: nav-action
-		title: Panel actions
+		title: Panel action style
 		type: class-select
 		allowEmpty: false
 		default: nav-action-dot
@@ -1396,46 +1396,6 @@ settings:
 				label: Accent color
 				value: var(--color-accent)
 	-
-		id: mobile
-		title: Mobile
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: auto-full-screen-title
-		title: Informative full screen
-		description: Display current page title when interface elements are hidden.
-		type: class-toggle
-	-
-		id: horizontal-tab-options
-		title: Horizontal tab list
-		type: class-toggle
-	-
-		id: mobile-sidebar-width-override
-		title: Sidebar width
-		type: variable-text
-		default: '84vw'
-	-
-		id: mobile-left-sidebar-width
-		title: Tablet sidebar width (Left)
-		type: variable-text
-		default: '360px'
-	-
-		id: mobile-right-sidebar-width
-		title: Tablet sidebar width (Right)
-		type: variable-text
-		default: '360px'
-	-
-		id: mobile-left-sidebar-width-pinned
-		title: Tablet pinned sidebar width (Left)
-		type: variable-text
-		default: '300px'
-	-
-		id: mobile-right-sidebar-width-pinned
-		title: Tablet pinned sidebar width (Right)
-		type: variable-text
-		default: '300px'
-	-
 		id: titlebar
 		title: Frame title
 		type: heading
@@ -1458,28 +1418,6 @@ settings:
 		min: 100
 		max: 900
 		step: 50
-	-
-		id: settings
-		title: Settings
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: hide-baseline-marketplace
-		title: Hide Marketplace
-		type: class-toggle
-	-
-		id: hide-baseline-migration
-		title: Hide Migrate
-		type: class-toggle
-	-
-		id: hide-baseline-documentation
-		title: Hide Docs
-		type: class-toggle
-	-
-		id: hide-baseline-support
-		title: Hide Support
-		type: class-toggle
 	-
 		id: colorful-frame
 		title: Tinted frame
@@ -1534,6 +1472,96 @@ settings:
 		max: 100
 		step: 10
 		format: '%'
+	-
+		id: mobile
+		title: Mobile
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: auto-full-screen-title
+		title: Informative full screen
+		description: Display current page title when interface elements are hidden.
+		type: class-toggle
+	-
+		id: horizontal-tab-options
+		title: Horizontal tab list
+		type: class-toggle
+	-
+		id: mobile-sidebar-width-override
+		title: Sidebar width
+		type: variable-text
+		default: '84vw'
+	-
+		id: mobile-left-sidebar-width
+		title: Tablet sidebar width (Left)
+		type: variable-text
+		default: '360px'
+	-
+		id: mobile-right-sidebar-width
+		title: Tablet sidebar width (Right)
+		type: variable-text
+		default: '360px'
+	-
+		id: mobile-left-sidebar-width-pinned
+		title: Tablet pinned sidebar width (Left)
+		type: variable-text
+		default: '300px'
+	-
+		id: mobile-right-sidebar-width-pinned
+		title: Tablet pinned sidebar width (Right)
+		type: variable-text
+		default: '300px'
+	-
+		id: empty-state
+		title: New tab
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: empty-state-logo-off
+		title: Hide Obsidian logo
+		type: class-toggle
+	-
+		id: empty-state-style
+		title: New tab action style
+		type: class-select
+		default: empty-state-baseline
+		options:
+			-
+				label: Baseline
+				value: empty-state-baseline
+			-
+				label: Glyph
+				value: empty-state-icon
+			-
+				label: Text
+				value: empty-state-text
+			-
+				label: Hidden
+				value: empty-state-hidden
+	-
+		id: settings
+		title: Settings
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: baseline-marketplace-off
+		title: Hide Marketplace
+		type: class-toggle
+	-
+		id: baseline-migration-off
+		title: Hide Migrate
+		type: class-toggle
+	-
+		id: baseline-documentation-off
+		title: Hide Docs
+		type: class-toggle
+	-
+		id: baseline-support-off
+		title: Hide Support
+		type: class-toggle
 	-
 		id: editor
 		title: Editor
@@ -3561,15 +3589,15 @@ body.is-phone .style-settings-container .setting-item-heading[data-id="info"] + 
   flex-direction: column;
 }
 
-body.hide-baseline-marketplace .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(1) {
+body.baseline-marketplace-off .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(1) {
   display: none;
 }
-body.hide-baseline-migration .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(2) {
+body.baseline-migration-off .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(2) {
   display: none;
 }
-body.hide-baseline-documentation .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(3) {
+body.baseline-documentation-off .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(3) {
   display: none;
 }
-body.hide-baseline-support .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(4) {
+body.baseline-support-off .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(4) {
   display: none;
 }
