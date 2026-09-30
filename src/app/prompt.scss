@@ -18,7 +18,6 @@ body:not(.is-mobile) .prompt {
 body:not(.is-phone) .prompt {
   .prompt-input {
     background-color: transparent;
-    font-size: var(--font-ui-small);
     padding: 20px;
   }
   .prompt-results {
