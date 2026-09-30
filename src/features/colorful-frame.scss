@@ -3,8 +3,8 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
 
   // Non-labeled icon color
   &:is(.layout-cards, .layout-border) .workspace-ribbon,
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic, .layout-cards, .layout-border) .workspace-ribbon .sidebar-toggle-button,
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic, .layout-border) .workspace-tabs.mod-top .workspace-tab-header-container,
+  &:is(.layout-baseline, .layout-classic, .layout-cards, .layout-border) .workspace-ribbon .sidebar-toggle-button,
+  &:is(.layout-baseline, .layout-classic, .layout-border) .workspace-tabs.mod-top .workspace-tab-header-container,
   &.layout-cards .workspace-tabs .workspace-tab-header-container,
   &.layout-minimal .workspace-split:not(.mod-left-split) .workspace-tabs.mod-top .workspace-tab-header-container {
     --icon-color: hsl(from var(--colorful-frame-icon-color) h s l / 0.7);
@@ -14,7 +14,7 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
   }
 
   // Tab text & icon color
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic, .layout-border) .workspace-tabs.mod-top .workspace-tab-header-container-inner,
+  &:is(.layout-baseline, .layout-classic, .layout-border) .workspace-tabs.mod-top .workspace-tab-header-container-inner,
   &.layout-cards .workspace-split .workspace-tabs .workspace-tab-header-container-inner,
   &.layout-minimal .workspace-split:not(.mod-left-split) .workspace-tabs.mod-top .workspace-tab-header-container-inner {
     --tab-text-color: hsl(from var(--colorful-frame-icon-color) h s l / 0.5);
@@ -27,7 +27,7 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
   &.tab-top-left-stacked:not(.theme-light.contrast-light-vivid) .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
     --colorful-frame-icon-color: initial;
   }
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic, .layout-minimal, .layout-cards, .layout-border, .layout-viewfinder).tab-default
+  &:is(.layout-baseline, .layout-classic, .layout-minimal, .layout-cards, .layout-border, .layout-viewfinder).tab-default
     .mod-root
     .workspace-tabs.mod-top
     .workspace-tab-header.is-active {
@@ -38,7 +38,7 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
   }
 
   // Workspace: Using top space for tint
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic, .layout-minimal) .workspace {
+  &:is(.layout-baseline, .layout-classic, .layout-minimal) .workspace {
     background-image: linear-gradient(
       var(--colorful-frame-background, var(--color-accent)) calc(var(--header-height) - var(--tab-outline-width)),
       transparent calc(var(--header-height) - var(--tab-outline-width))
@@ -46,22 +46,9 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
   }
 
   // Fix: Stacked tabs spacing
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic) .workspace-ribbon .side-dock-actions,
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic).tab-top-left-stacked
-    .mod-sidedock.mod-left-split
-    .mod-top-left-space
-    .workspace-tab-header-container-inner {
+  &:is(.layout-baseline, .layout-classic) .workspace-ribbon .side-dock-actions,
+  &:is(.layout-baseline, .layout-classic).tab-top-left-stacked .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
     margin-top: 8px;
-  }
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic):not(.mod-macos).tab-top-left-stacked
-    .mod-sidedock.mod-left-split
-    .mod-top-left-space
-    .workspace-tab-header-container-inner,
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic).mod-macos.is-frameless:not(.is-hidden-frameless).tab-top-left-stacked
-    .mod-sidedock.mod-left-split
-    .mod-top-left-space
-    .workspace-tab-header-container-inner {
-    margin-top: calc(var(--header-height) + 8px);
   }
 
   // Fix: Resize handle position
@@ -94,7 +81,7 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
   }
 
   // Fix: Obsidian frame color bleed
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic, .layout-cards, .layout-border, .layout-frame).is-frameless:not(.is-hidden-frameless) .titlebar {
+  &:is(.layout-baseline, .layout-classic, .layout-cards, .layout-border, .layout-frame).is-frameless:not(.is-hidden-frameless) .titlebar {
     --titlebar-text-color: hsl(from var(--colorful-frame-icon-color) h s l / 0.7);
     --titlebar-text-color-focused: var(--colorful-frame-icon-color);
     border-bottom: none;
@@ -102,17 +89,13 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
   }
 
   // Fix: Window control icon color
-  &:is(.layout-baseline, .layout-cupertino, .layout-classic, .layout-minimal, .layout-cards, .layout-border, .layout-frame).is-frameless .titlebar {
+  &:is(.layout-baseline, .layout-classic, .layout-minimal, .layout-cards, .layout-border, .layout-frame).is-frameless .titlebar {
     --titlebar-text-color: hsl(from var(--colorful-frame-icon-color) h s l / 0.7);
     --titlebar-text-color-focused: var(--colorful-frame-icon-color);
   }
 
   // Fix: Override underline tab style
-  &:is(.tab-underline, .tab-underline-accented):is(.layout-cupertino, .layout-classic, .layout-minimal)
-    .workspace
-    .mod-root
-    .workspace-tabs:not(.mod-stacked)
-    .workspace-tab-header {
+  &:is(.tab-underline, .tab-underline-accented):not(.layout-cards, .layout-border) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
     margin-bottom: var(--border-width);
 
     &.is-active {

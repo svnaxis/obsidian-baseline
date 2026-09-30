@@ -60,45 +60,6 @@ body:is(.layout-cards, .layout-border) {
     border-bottom-width: 0;
   }
 }
-body:is(.layout-cupertino, .layout-macos, .layout-fusion).is-phone {
-  @media only screen and (max-width: 600px) {
-    .omnisearch-modal {
-      --prompt-top: calc(var(--safe-area-inset-top) + var(--header-height)) !important;
-      backdrop-filter: none !important;
-      background-color: transparent !important;
-      height: calc(100vh - var(--prompt-top)) !important;
-
-      &::before {
-        position: fixed;
-        z-index: -1;
-        backdrop-filter: var(--blur-l);
-        inset: 0;
-        pointer-events: none;
-        content: "";
-      }
-
-      .prompt-results {
-        backdrop-filter: var(--blur-l);
-        mask: none !important;
-        border-radius: var(--modal-radius) var(--modal-radius) 0 0;
-        background-color: var(--modal-background);
-        padding-top: var(--safe-area-inset-side) !important;
-        padding-bottom: var(--safe-area-inset-bottom);
-      }
-      .omnisearch-input-container {
-        gap: 8px;
-        margin-bottom: var(--safe-area-inset-side);
-        padding-inline: var(--safe-area-inset-side);
-      }
-      .prompt-input {
-        width: 100%;
-      }
-      .omnisearch-input-container__buttons {
-        padding: 0;
-      }
-    }
-  }
-}
 
 // Notebook Navigator https://github.com/johansan/notebook-navigator
 body {
@@ -183,6 +144,14 @@ body.is-phone.hider-sidebar-buttons {
     color: var(--text-normal);
   }
 
+  .horizontal-main-container,
+  .workspace {
+    overflow: visible;
+  }
+  .workspace-split {
+    padding-bottom: 0 !important;
+  }
+
   .status-bar {
     width: 100%;
     transform: none !important;
@@ -203,20 +172,10 @@ body.is-phone.hider-sidebar-buttons {
       border: none;
     }
   }
-
-  &:is(.layout-cupertino, .layout-cards, .layout-border):not(.is-mobile) {
-    .workspace-split {
-      padding-bottom: 0 !important;
-    }
-    .status-bar {
-      bottom: 8px;
-      right: 8px;
-    }
-  }
 }
 
 // Novel Word Count https://github.com/isaaclyman/novel-word-count-obsidian
-body:not(.is-mobile):not(.nav-action-center, .nav-action-left) .mod-sidedock .workspace-leaf-content.novel-word-count--active > .nav-header {
+body:not(.is-mobile):not(.nav-action-center, .nav-action-left) .mod-sidedock.novel-word-count--active .nav-header {
   &:not(:hover) .nav-buttons-container {
     .nav-action-button {
       opacity: 0;
@@ -231,41 +190,12 @@ body:not(.is-mobile):not(.nav-action-center, .nav-action-left) .mod-sidedock .wo
 
     &::after {
       position: absolute;
-      overflow: visible;
+      align-self: center;
       opacity: 0;
       transition: var(--anim-duration-moderate);
+      overflow: visible;
       color: var(--text-faint);
     }
-  }
-}
-
-body:is(.layout-cupertino, .layout-macos, .layout-fusion).is-mobile .workspace-drawer .novel-word-count--active {
-  .nav-buttons-container {
-    overflow: visible;
-  }
-  .nav-buttons-container::after {
-    position: absolute;
-    transform: translateY(-24px);
-  }
-
-  &.novel-word-count--note-right .nav-files-container .nav-folder-title::after,
-  &.novel-word-count--note-right .nav-files-container .nav-file-title::after {
-    flex: unset;
-    order: 0;
-  }
-
-  &.novel-word-count--note-inline .nav-files-container .tree-item .tree-item-inner {
-    flex: unset;
-    padding: 0 8px;
-  }
-  &.novel-word-count--note-inline .nav-files-container .nav-folder-title::after,
-  &.novel-word-count--note-inline .nav-files-container .nav-file-title::after {
-    order: 0;
-  }
-
-  &.novel-word-count--folder-below .nav-files-container .nav-folder-title::after,
-  &.novel-word-count--folder-below .nav-files-container .nav-file-title::after {
-    flex-basis: 100%;
   }
 }
 

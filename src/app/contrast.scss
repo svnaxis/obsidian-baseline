@@ -43,16 +43,6 @@ body.is-mobile.contrast-dark-black-mobile.theme-dark {
   .vertical-tab-content {
     background-color: black !important;
   }
-
-  &:not(.is-mobile):not(.layout-cupertino, .layout-macos, .layout-fusion) {
-    .menu,
-    .menu-scroll {
-      background-color: black;
-    }
-    .modal {
-      border: var(--modal-border-width) solid var(--modal-border-color);
-    }
-  }
 }
 
 // Light contrast: High contrast

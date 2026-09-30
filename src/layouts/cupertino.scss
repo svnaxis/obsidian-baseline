@@ -1,4 +1,4 @@
-body:is(.layout-baseline, :not(.css-settings-manager), .layout-cupertino, .layout-fusion) {
+body:is(.layout-baseline, :not(.css-settings-manager), .layout-fusion) {
   &:not(.is-mobile) {
     .workspace:not(.is-primary-sidedock-open):not(.is-secondary-sidedock-open) .mod-root {
       padding-bottom: 0;
@@ -194,7 +194,7 @@ body.layout-fusion.is-tablet {
 }
 
 // Cupertino specific
-body.layout-cupertino:not(.is-phone) {
+body.layout-baseline.input-cupertino:not(.is-phone) {
   &.theme-light .workspace:is(.is-primary-sidedock-open, .is-secondary-sidedock-open) .mod-root .workspace-tab-container {
     box-shadow:
       hsl(0 0% 0% / 0.07) 0 2px 2px -1px,
