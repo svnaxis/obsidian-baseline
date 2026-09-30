@@ -122,4 +122,6 @@ input[type="range"]::-webkit-slider-thumb {
 .setting-hotkey,
 .suggestion-hotkey {
   color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  font-weight: var(--input-font-weight);
 }
