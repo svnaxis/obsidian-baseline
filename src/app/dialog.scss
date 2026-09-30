@@ -36,11 +36,6 @@ body {
     margin: 4px 8px;
     border-color: var(--background-modifier-hover);
   }
-  .suggestion-hotkey {
-    background-color: transparent;
-    border: none;
-    padding: 0 !important;
-  }
 }
 
 body:not(.is-phone) {

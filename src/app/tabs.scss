@@ -448,6 +448,9 @@ body.is-tablet .workspace .mod-root {
   .workspace-tab-header.is-active:hover {
     background-color: inherit;
   }
+  .workspace-tab-header:not(.is-active):hover {
+    box-shadow: none;
+  }
   .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
     background-color: inherit;
     color: var(--text-muted);

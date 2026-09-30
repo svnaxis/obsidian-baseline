@@ -7,6 +7,14 @@
   }
   .empty-state-action-list {
     margin-top: 0;
+    gap: 0;
+  }
+  .empty-state-action-list .text-icon-button {
+    --icon-color-hover: var(--text-muted);
+    --icon-size: var(--icon-xs);
+    --icon-stroke: var(--icon-xs-stroke-width);
+    border: none;
+    color: var(--text-muted);
   }
 
   .empty-state-action-list::before {

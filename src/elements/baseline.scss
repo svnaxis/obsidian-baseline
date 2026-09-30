@@ -3,6 +3,9 @@ body {
   --input-transition: var(--anim-duration-superfast), box-shadow var(--anim-duration-fast);
   --button-transition: var(--input-transition), scale var(--anim-duration-fast) var(--anim-motion-baseline);
 
+  --hotkey-radius: var(--radius-s);
+  --hotkey-corner-shape: var(--corner-shape);
+
   /* 0 when <1, 1 when >=1 */
   --radius-modifier-check: clamp(0, (var(--radius-modifier) - 1) * 10000 + 1, 1);
   --button-radius: calc((8px * var(--radius-modifier)) * (1 - var(--radius-modifier-check)) + 100vh * var(--radius-modifier-check));
@@ -112,4 +115,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .slider-value {
   color: var(--text-faint);
+}
+
+// Hotkey
+.empty-state-hotkey,
+.setting-hotkey,
+.suggestion-hotkey {
+  color: var(--text-muted);
 }
