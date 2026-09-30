@@ -22,7 +22,6 @@ body.input-cupertino {
   .cm-tooltip,
   .notice {
     backdrop-filter: var(--blur-s);
-    background: var(--raised-background);
   }
 }
 
@@ -225,13 +224,10 @@ body.input-cupertino {
 
   .tooltip {
     --background-modifier-message: var(--background-primary);
+    --tooltip-background: var(--background-primary);
+    --tooltip-shadow: none;
+    --tooltip-color: var(--text-muted);
     filter: drop-shadow(0 0 16px var(--background-modifier-box-shadow));
-    animation: none;
-    box-shadow: none;
-    border-radius: var(--radius-l);
-    padding: 8px 16px;
-    color: var(--text-muted);
-    font-weight: var(--font-normal);
   }
 }
 

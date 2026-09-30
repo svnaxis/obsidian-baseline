@@ -257,23 +257,15 @@ body.input-cupertino {
       gap: 0px;
       transition: var(--anim-duration-moderate);
       border-radius: var(--clickable-icon-radius);
-      padding: 0;
-      outline: 2px solid transparent;
-      background-clip: content-box;
+      padding: 4px;
       height: auto;
-      z-index: 1;
     }
-
     .workspace-tab-header-container-inner:hover {
-      background-color: var(--background-modifier-hover);
-      outline-color: var(--background-modifier-hover);
-    }
-    .workspace-tab-header-container-inner:hover .workspace-tab-header.is-active {
       background: var(--raised-background);
       box-shadow: var(--shadow-xs);
 
-      .workspace-tab-header-inner-icon {
-        color: var(--text-normal) !important;
+      .workspace-tab-header.is-active {
+        background: var(--background-modifier-hover);
       }
     }
 
@@ -282,7 +274,7 @@ body.input-cupertino {
       min-width: var(--tab-action-width);
     }
     .workspace-tab-header-inner {
-      padding: 10px;
+      padding: 6px;
     }
     .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
       background-color: var(--background-modifier-hover);
