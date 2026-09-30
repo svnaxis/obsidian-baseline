@@ -191,7 +191,11 @@ body.is-phone {
   }
 }
 
-// Notice
+// Notice & Tooltop
+body {
+  --tooltip-radius: var(--radius-m);
+  --tooltip-shadow: var(--shadow-xs);
+}
 .notice-container {
   display: flex;
   flex-direction: column;
