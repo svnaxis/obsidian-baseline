@@ -56,7 +56,7 @@ body.is-mobile.contrast-dark-black-mobile.theme-dark {
 .theme-light.contrast-light-vivid.layout-minimal div:is(.workspace-ribbon, .mod-sidedock.mod-left-split) {
   --background-secondary: #1f1f1f;
 }
-.theme-light.contrast-light-vivid:not(.layout-macos, .layout-fusion, .layout-minimal, .layout-frame, .layout-viewfinder)
+.theme-light.contrast-light-vivid:not(.layout-macos, .layout-fusion, .layout-minimal, .layout-frame)
   div:is(
     .titlebar,
     .workspace-ribbon,
@@ -64,11 +64,11 @@ body.is-mobile.contrast-dark-black-mobile.theme-dark {
     .mod-sidedock,
     .mod-root .workspace-tab-header-container > div:not(.workspace-tab-header-container-inner)
   ),
-.theme-light.contrast-light-vivid:not(.layout-macos, .layout-fusion, .layout-minimal, .layout-frame, .layout-viewfinder):not(.tab-default)
+.theme-light.contrast-light-vivid:not(.layout-macos, .layout-fusion, .layout-minimal, .layout-frame):not(.tab-default)
   .mod-root
   .workspace-tab-header,
 .theme-light.contrast-light-vivid.layout-minimal div:is(.workspace-ribbon, .mod-sidedock.mod-left-split),
-.theme-light.contrast-light-vivid:is(.layout-frame, .layout-viewfinder) div:is(.titlebar, .workspace-ribbon, .workspace-ribbon, .mod-sidedock) {
+.theme-light.contrast-light-vivid.layout-frame div:is(.titlebar, .workspace-ribbon, .workspace-ribbon, .mod-sidedock) {
   color-scheme: dark;
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;

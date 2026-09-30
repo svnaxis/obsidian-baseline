@@ -27,7 +27,7 @@ body:not(.is-mobile):not(.is-translucent).colorful-frame {
   &.tab-top-left-stacked:not(.theme-light.contrast-light-vivid) .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
     --colorful-frame-icon-color: initial;
   }
-  &:is(.layout-baseline, .layout-classic, .layout-minimal, .layout-cards, .layout-border, .layout-viewfinder).tab-default
+  &:is(.layout-baseline, .layout-classic, .layout-minimal, .layout-cards, .layout-border).tab-default
     .mod-root
     .workspace-tabs.mod-top
     .workspace-tab-header.is-active {

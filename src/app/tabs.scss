@@ -87,14 +87,7 @@ body:not(.is-phone) .workspace .mod-root {
 body:not(.is-phone) .mod-root .sidebar-toggle-button {
   padding-inline-end: 0;
 }
-body.is-tablet:is(.tab-default, :not(.css-settings-manager)):not(
-    .layout-macos,
-    .layout-classic,
-    .layout-minimal,
-    .layout-border,
-    .layout-frame,
-    .layout-viewfinder
-  )
+body.is-tablet:is(.tab-default, :not(.css-settings-manager)):not(.layout-macos, .layout-classic, .layout-minimal, .layout-border, .layout-frame)
   .workspace-drawer.is-pinned.mod-left
   + .mod-root
   .workspace-tab-header-container {
