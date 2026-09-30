@@ -228,7 +228,7 @@ body.layout-macos:not(.is-phone) {
 
   .modal.mod-settings .vertical-tab-header {
     background-color: var(--background-secondary);
-    border-radius: var(--modal-radius) 0 0 var(--modal-radius);
+    border-radius: calc(var(--modal-radius) - 1px) 0 0 calc(var(--modal-radius) - 1px);
     margin: var(--border-width) 0 var(--border-width) var(--border-width);
   }
 }
