@@ -243,8 +243,8 @@
 
     --background-primary-alt: var(--color-base-20);
     --background-secondary-alt: var(--color-base-00);
-    --interactive-normal: oklch(from var(--colorist-70) calc(l - 0.08) 0.01 h / 12%);
-    --interactive-hover: oklch(from var(--colorist-70) calc(l - 0.1) c h / 20%);
+    --interactive-normal: oklch(from var(--color-base-70) calc(l - 0.08) 0.01 h / 12%);
+    --interactive-hover: oklch(from var(--color-base-70) calc(l - 0.1) c h / 20%);
 
     &.color-scheme-accent {
       --accent-h: 208;
@@ -341,8 +341,8 @@
     --colorist-c-100: 0;
 
     --background-primary-alt: var(--color-base-20);
-    --interactive-normal: oklch(from var(--colorist-70) calc(l - 0.08) 0.01 h / 24%);
-    --interactive-hover: oklch(from var(--colorist-70) calc(l - 0.1) c h / 36%);
+    --interactive-normal: oklch(from var(--color-base-70) calc(l - 0.08) 0.01 h / 24%);
+    --interactive-hover: oklch(from var(--color-base-70) calc(l - 0.1) c h / 36%);
 
     &.color-scheme-accent {
       --accent-h: 206;

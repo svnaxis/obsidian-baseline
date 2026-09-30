@@ -1,21 +1,14 @@
 body {
-  --prompt-input-height: 48px;
+  --prompt-input-height: 64px;
   --prompt-background: var(--modal-background);
   --prompt-border-width: 0px;
   --prompt-max-height: 60vh;
 }
 
-.prompt {
+body:not(.is-mobile) .prompt {
   top: 10rem;
   border-radius: var(--menu-radius);
 
-  .prompt-input {
-    background-color: transparent;
-    padding: 20px;
-  }
-  .prompt-results {
-    padding: 8px;
-  }
   .suggestion-item {
     padding: 8px 12px;
     align-items: center;
@@ -24,7 +17,12 @@ body {
 
 body:not(.is-phone) .prompt {
   .prompt-input {
+    background-color: transparent;
     font-size: var(--font-ui-small);
+    padding: 20px;
+  }
+  .prompt-results {
+    padding: 8px;
   }
   .suggestion-item {
     font-size: var(--font-ui-small);
@@ -33,27 +31,33 @@ body:not(.is-phone) .prompt {
 
 body.is-mobile {
   --prompt-background: var(--modal-background);
+  --prompt-input-height: 64px;
 }
 
-body.is-phone {
-  .prompt {
-    animation: none;
-    border-radius: var(--radius-l) var(--radius-l) 0 0;
+body.is-phone .prompt {
+  animation: none;
+  border-radius: var(--radius-l) var(--radius-l) 0 0;
 
-    .prompt-results {
-      padding: var(--safe-area-inset-side);
-    }
-    .prompt-input-container {
-      width: auto;
-      margin: auto var(--safe-area-inset-side) var(--keyboard-spacing);
-    }
-    .prompt-input {
-      border: none;
-      background-color: var(--background-primary);
-      padding: 24px;
-    }
-    .suggestion-item {
-      padding: calc(16px * var(--density-modifier)) 16px;
-    }
+  .prompt-results {
+    padding: var(--safe-area-inset-side);
+  }
+  .prompt-input-container {
+    width: auto;
+    margin: auto var(--safe-area-inset-side) var(--keyboard-spacing);
+  }
+  .prompt-input {
+    border: none;
+    background-color: var(--background-primary);
+  }
+  .suggestion-item {
+    padding: calc(16px * var(--density-modifier)) 16px;
+  }
+}
+
+body.is-tablet .prompt {
+  border-radius: var(--modal-radius);
+
+  .suggestion-item {
+    padding: calc(12px * var(--density-modifier)) 16px;
   }
 }

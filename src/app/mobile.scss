@@ -53,8 +53,6 @@ body.is-mobile {
   --mobile-left-sidebar-width-pinned: 300px;
   --mobile-right-sidebar-width-pinned: 300px;
 
-  --vault-profile-order: 0;
-
   // Default override
   &.theme-dark {
     --setting-items-background: var(--background-secondary-alt);
@@ -232,6 +230,7 @@ body.is-mobile {
 
 body.is-phone {
   --mobile-sidebar-radius: 0;
+  --vault-profile-order: 0;
 
   // Side panels: Floating editor panel
   .workspace {

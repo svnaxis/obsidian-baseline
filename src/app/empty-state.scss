@@ -40,25 +40,36 @@ body:not(.empty-state-logo-off) .empty-state-action-list::before {
 }
 
 // Empty State: Baseline
-body:is(.empty-state-baseline, :not(.css-settings-manager)) .empty-state-action-list {
-  .text-icon-button {
+body:is(.empty-state-baseline, :not(.css-settings-manager)) {
+  .empty-state-action-list .text-icon-button {
     --icon-size: var(--icon-xs);
     --icon-stroke: var(--icon-xs-stroke-width);
+  }
+  &.is-mobile .empty-state-action-list .text-icon-button {
+    justify-content: center;
   }
 }
 
 // Empty State: Glyph
-body.empty-state-icon .empty-state-action-list {
-  flex-direction: row;
-  flex-wrap: wrap;
+body.empty-state-icon {
+  .empty-state-action-list {
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  .text-icon-button {
-    width: auto;
-    padding: 8px;
+    .text-icon-button {
+      width: auto;
+      padding: 8px;
+    }
+    .text-button-label,
+    .empty-state-hotkey {
+      display: none;
+    }
   }
-  .text-button-label,
-  .empty-state-hotkey {
-    display: none;
+  &.is-mobile .empty-state-action-list .text-icon-button {
+    --icon-size: var(--icon-l);
+    --icon-stroke: var(--icon-l-stroke-width);
+    width: var(--touch-size-m);
+    height: var(--touch-size-m);
   }
 }
 

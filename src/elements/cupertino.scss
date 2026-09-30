@@ -64,11 +64,9 @@ body.input-cupertino {
     --tab-action-width: 36px;
 
     &.theme-light {
-      --blur-background: hsl(0 0% 98% / 0.75);
       --shadow-extra: inset 0 0 0 0.5pt hsl(0 0% 100% / 0.25);
     }
     &.theme-dark {
-      --blur-background: hsl(0 0% 25% / 0.75);
       --shadow-extra: inset 0 0 0 0.5pt hsl(0 0% 100% / 0.05);
     }
   }
