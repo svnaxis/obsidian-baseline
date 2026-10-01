@@ -1,63 +1,4 @@
 body.input-cupertino.is-mobile {
-  // Liquid Glass
-  &.is-phone:not(.mode-switcher-off) .mod-root .workspace-leaf-content[data-type="markdown"] .view-actions button:nth-last-child(2),
-  &.is-phone .prompt-input,
-  &.is-phone .prompt-input-container .prompt-input-cta:not(:empty),
-  &.is-phone .prompt-input-container .search-input-clear-button,
-  &.is-phone .workspace-drawer-header-icon,
-  .search-input-container,
-  .mobile-tab-switcher-menu-button,
-  .mobile-tab-switcher-menu-spacer .clickable-icon,
-  .pull-action {
-    backdrop-filter: var(--raised-blur);
-    transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
-    box-shadow: var(--raised-shadow);
-    border: none;
-    background: var(--raised-background);
-    color: var(--text-normal);
-  }
-
-  // HDR effects
-  .mod-raised:not(.prompt-input-container)::after,
-  &.is-phone:not(.mode-switcher-off) .mod-root .workspace-leaf-content[data-type="markdown"] .view-actions button:nth-last-child(2)::after,
-  &.is-phone .prompt-input-container::after,
-  &.is-phone .prompt-input-container .prompt-input-cta:not(:empty)::before,
-  &.is-phone .prompt-input-container .search-input-clear-button::before,
-  &.is-tablet .menu::after,
-  &.is-tablet .workspace-drawer:not(.is-pinned)::after,
-  .search-input-container::after,
-  .mobile-tab-switcher-menu-button::after,
-  .mobile-tab-switcher-menu-spacer .clickable-icon::after,
-  .notice::after,
-  .pull-action::after,
-  .modal:not(.mod-sidebar-layout)::after,
-  .menu::after,
-  .suggestion-container::after,
-  .popover::after {
-    display: var(--raised-mask-display);
-    position: absolute;
-    content: "";
-    backdrop-filter: brightness(1.1);
-    background: var(--raised-mask-background);
-    mask: var(--raised-mask);
-    mask-composite: var(--raised-mask-composite);
-    inset: 0;
-    border: var(--raised-mask-border-width) solid transparent;
-    border-width: var(--border-width) 0;
-    border-radius: inherit;
-    pointer-events: none;
-    z-index: -1;
-  }
-  &.theme-dark {
-    --raised-mask-background: none;
-  }
-  &.is-phone .prompt-input-container {
-    background: none;
-    &::after {
-      margin-right: 56px;
-    }
-  }
-
   // Side panels
   .workspace-leaf-content:not([data-type="empty"]) .mod-left-split-toggle svg.svg-icon {
     --icon-size: var(--icon-l);
@@ -106,6 +47,63 @@ body.input-cupertino.is-mobile {
 }
 
 body.input-cupertino.is-phone {
+  // Liquid Glass
+  &:not(.mode-switcher-off) .mod-root .workspace-leaf-content[data-type="markdown"] .view-actions button:nth-last-child(2),
+  .prompt-input,
+  .prompt-input-container .prompt-input-cta:not(:empty),
+  .prompt-input-container .search-input-clear-button,
+  .workspace-drawer-header-icon,
+  .search-input-container,
+  .mobile-tab-switcher-menu-button,
+  .mobile-tab-switcher-menu-spacer .clickable-icon,
+  .pull-action {
+    backdrop-filter: var(--raised-blur);
+    transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+    box-shadow: var(--raised-shadow);
+    border: none;
+    background: var(--raised-background);
+    color: var(--text-normal);
+  }
+
+  // HDR effects
+  .mod-raised:not(.prompt-input-container)::after,
+  &:not(.mode-switcher-off) .mod-root .workspace-leaf-content[data-type="markdown"] .view-actions button:nth-last-child(2)::after,
+  .prompt-input-container::after,
+  .prompt-input-container .prompt-input-cta:not(:empty)::before,
+  .prompt-input-container .search-input-clear-button::before,
+  .search-input-container::after,
+  .mobile-tab-switcher-menu-button::after,
+  .mobile-tab-switcher-menu-spacer .clickable-icon::after,
+  .notice::after,
+  .pull-action::after,
+  .modal:not(.mod-sidebar-layout)::after,
+  .menu::after,
+  .suggestion-container::after,
+  .popover::after {
+    display: var(--raised-mask-display);
+    position: absolute;
+    content: "";
+    backdrop-filter: brightness(1.1);
+    background: var(--raised-mask-background);
+    mask: var(--raised-mask);
+    mask-composite: var(--raised-mask-composite);
+    inset: 0;
+    border: var(--raised-mask-border-width) solid transparent;
+    border-width: var(--border-width) 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+  }
+  &.theme-dark {
+    --raised-mask-background: none;
+  }
+  .prompt-input-container {
+    background: none;
+    &::after {
+      margin-right: 56px;
+    }
+  }
+
   // Editor panel
   .mod-root {
     .view-header-left,
@@ -230,4 +228,8 @@ body.input-cupertino.is-phone {
     width: 32px;
     height: 32px;
   }
+}
+
+body.input-cupertino.is-tablet .mod-raised {
+  background: var(--raised, var(--raised-background));
 }

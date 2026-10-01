@@ -151,10 +151,11 @@ body.input-cupertino.is-tablet {
     }
     .vertical-tab-nav-item {
       padding: calc(12px * var(--density-modifier)) var(--side-padding);
+      border-radius: var(--radius-l);
+      font-size: var(--font-ui-medium);
     }
     .vertical-tab-nav-item.is-active {
-      color: var(--interactive-accent);
-      background-color: var(--background-modifier-hover);
+      font-weight: calc(var(--font-weight) + var(--bold-modifier));
     }
   }
 }

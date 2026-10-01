@@ -685,7 +685,7 @@ body.is-tablet {
   .workspace-drawer-header-icon.mod-raised {
     backdrop-filter: none;
     box-shadow: none;
-    background-color: transparent;
+    background: none !important;
     border: none;
   }
   .workspace-drawer-header-icon::after {
