@@ -112,7 +112,7 @@ body:not(.banner-off) {
           display: none !important;
         }
       }
-      div:is(.mod-header, .inline-title, .metadata-container) {
+      &:not(.banner-icon.banner-title) div:is(.mod-header, .inline-title, .metadata-container) {
         position: relative;
         z-index: 1;
       }
@@ -206,6 +206,7 @@ body:not(.banner-off) {
       }
       &:not(:focus-within) {
         position: absolute;
+        z-index: 1;
         top: calc(var(--view-top-spacing-markdown) + var(--banner-image-height) - var(--banner-fade-height) + 1rem);
         align-items: center;
         animation: bannerTitleEditOut var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;

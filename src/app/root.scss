@@ -272,6 +272,13 @@ body.styled-scrollbars div:not(:hover)::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
+// Animation
+@keyframes floatIn {
+  from {
+    transform: scale(0.99);
+  }
+}
+
 // Style Settings
 body:not(.accented-interface) {
   --interactive-accent: var(--color-base-100);

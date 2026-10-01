@@ -35,7 +35,6 @@ body.is-mobile {
 
 body.is-phone {
   .prompt {
-    animation: none;
     border-radius: var(--radius-l) var(--radius-l) 0 0;
   }
   .prompt-results {

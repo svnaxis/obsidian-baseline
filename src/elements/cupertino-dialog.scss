@@ -30,12 +30,6 @@ body.input-cupertino {
 body.input-cupertino:not(.is-mobile) {
   .menu,
   .suggestion-container {
-    animation: none;
-
-    svg.svg-icon {
-      transition: none;
-    }
-
     .menu-item,
     .suggestion-item {
       padding: calc(4px * var(--density-modifier)) 12px;
@@ -152,7 +146,7 @@ body.input-cupertino.is-tablet {
 
 // Modal
 body.input-cupertino:not(.is-mobile) {
-  @keyframes modalInCupertino {
+  @keyframes floatInCupertino {
     from {
       opacity: 1;
       filter: none;
@@ -160,7 +154,7 @@ body.input-cupertino:not(.is-mobile) {
     }
   }
   .modal {
-    animation: modalInCupertino var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
+    animation: floatInCupertino var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
   }
 
   .modal:not(.mod-sidebar-layout) {

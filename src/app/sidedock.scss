@@ -19,12 +19,6 @@ body.is-mobile {
   --nav-item-children-margin-start: 12px;
 }
 
-@keyframes workspaceLeafIn {
-  from {
-    transform: scale(0.99);
-  }
-}
-
 .sidebar-toggle-icon-inner {
   transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
 }
@@ -120,7 +114,7 @@ body:not(.is-mobile) {
     background-color: transparent;
   }
   .mod-sidedock .workspace-leaf:not([style*="display: none"]) {
-    animation: workspaceLeafIn var(--anim-duration-fast) var(--anim-motion-baseline) forwards;
+    animation: floatIn var(--anim-duration-fast) var(--anim-motion-baseline) forwards;
   }
 
   // Sidedock padding
