@@ -56,6 +56,7 @@ body.is-mobile {
 
   // Default override
   &.theme-dark {
+    --tag-background: color-mix(in oklch, var(--color-accent) 10%, transparent);
     --setting-items-background: var(--background-secondary-alt);
     --setting-items-divider-color: var(--background-modifier-hover);
     --menu-divider-color: var(--background-modifier-hover);
@@ -72,6 +73,7 @@ body.is-mobile {
     .mobile-navbar {
       background-color: color-mix(in srgb, var(--background-secondary) var(--blur-opacity-m), transparent) !important;
       backdrop-filter: var(--blur-m);
+      border: var(--border-width) solid var(--background-modifier-hover);
     }
   }
 
@@ -249,7 +251,7 @@ body.is-phone {
   .mod-root[style*="transform: translateX"] {
     border-radius: var(--safe-area-inset-top);
     overflow: hidden;
-    box-shadow: var(--shadow-s);
+    box-shadow: var(--shadow-xs);
   }
 
   .workspace-drawer-backdrop {
@@ -472,6 +474,7 @@ body.is-phone {
     height: var(--touch-size-l);
     background-color: color-mix(in srgb, var(--background-secondary) var(--blur-opacity-m), transparent);
     backdrop-filter: var(--blur-m);
+    border: var(--border-width) solid var(--background-modifier-hover);
   }
   &.mod-toolbar-open:not(.mode-switcher-off) .mod-root .workspace-leaf-content[data-type="markdown"] .view-actions button:nth-last-child(2) {
     width: var(--touch-size-m);

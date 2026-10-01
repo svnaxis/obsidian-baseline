@@ -57,6 +57,7 @@ body,
   --color-pink: rgb(var(--color-pink-rgb));
 
   --shadow-surface: 0 0 0 var(--border-width) var(--background-modifier-hover);
+  --shadow-xs: var(--shadow-s);
 
   --background-modifier-hover: hsl(from var(--mono-100) h s l / 0.05) !important;
   --interactive-normal: color-mix(in srgb, var(--background-primary), white 7%);
