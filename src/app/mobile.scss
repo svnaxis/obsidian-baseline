@@ -76,6 +76,9 @@ body.is-mobile {
       border: var(--border-width) solid var(--background-modifier-hover);
     }
   }
+  &.is-tablet .mod-raised::after {
+    content: none !important;
+  }
 
   // Side panels
   .workspace-drawer {
