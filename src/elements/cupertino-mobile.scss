@@ -230,6 +230,12 @@ body.input-cupertino.is-phone {
   }
 }
 
-body.input-cupertino.is-tablet .mod-raised {
-  background: var(--raised, var(--raised-background));
+body.input-cupertino.is-tablet {
+  .mod-raised {
+    background: var(--raised, var(--raised-background));
+  }
+  .workspace-tab-header-new-tab,
+  .workspace-tab-header-tab-list {
+    --icon-color: var(--text-normal);
+  }
 }
