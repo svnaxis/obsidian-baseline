@@ -259,11 +259,11 @@ body.input-cupertino {
       height: auto;
     }
     .workspace-tab-header-container-inner:hover {
-      background: var(--raised-background);
-      box-shadow: var(--shadow-xs);
+      background-color: var(--background-modifier-hover);
 
       .workspace-tab-header.is-active {
-        background: var(--background-modifier-hover);
+        background: var(--raised-background);
+        box-shadow: var(--shadow-xs);
       }
     }
 
