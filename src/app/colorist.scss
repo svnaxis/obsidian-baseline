@@ -43,6 +43,12 @@
     --color-base-100: oklch(
       pow(var(--colorist-l-100), var(--colorist-l-light)) min(0.1, calc(var(--colorist-c-100) * var(--colorist-c-light))) var(--colorist-h-light)
     );
+
+    &.color-scheme-accent {
+      --color-accent: oklch(0.65 max(0.15, calc(var(--colorist-c-light) * 0.1)) var(--colorist-h-light));
+      --color-accent-1: oklch(0.7 max(0.15, calc(var(--colorist-c-light) * 0.1)) var(--colorist-h-light));
+      --color-accent-2: oklch(0.75 max(0.15, calc(var(--colorist-c-light) * 0.1)) var(--colorist-h-light));
+    }
   }
   &.theme-dark {
     --color-base-00: oklch(
@@ -81,6 +87,12 @@
     --color-base-100: oklch(
       pow(var(--colorist-l-100), calc(1 / var(--colorist-l-dark))) min(0.1, calc(var(--colorist-c-100) * var(--colorist-c-dark))) var(--colorist-h-dark)
     );
+
+    &.color-scheme-accent {
+      --color-accent: oklch(0.65 max(0.15, calc(var(--colorist-c-dark) * 0.1)) var(--colorist-h-dark));
+      --color-accent-1: oklch(0.8 max(0.15, calc(var(--colorist-c-dark) * 0.1)) var(--colorist-h-dark));
+      --color-accent-2: oklch(0.95 max(0.15, calc(var(--colorist-c-dark) * 0.1)) var(--colorist-h-dark));
+    }
   }
 }
 
@@ -110,12 +122,6 @@
   --colorist-c-60: 0.025;
   --colorist-c-70: 0.025;
   --colorist-c-100: 0.025;
-
-  &.color-scheme-accent:not(.cupertino-light) {
-    --color-accent: oklch(0.65 max(0.15, calc(var(--colorist-c-light) * 0.1)) var(--colorist-h-light));
-    --color-accent-1: oklch(0.7 max(0.15, calc(var(--colorist-c-light) * 0.1)) var(--colorist-h-light));
-    --color-accent-2: oklch(0.75 max(0.15, calc(var(--colorist-c-light) * 0.1)) var(--colorist-h-light));
-  }
 }
 .theme-dark.baseline-dark {
   --colorist-l-00: 0.2;
@@ -143,12 +149,6 @@
   --colorist-c-60: 0.025;
   --colorist-c-70: 0.0225;
   --colorist-c-100: 0.02;
-
-  &.color-scheme-accent:not(.cupertino-dark) {
-    --color-accent: oklch(0.65 max(0.15, calc(var(--colorist-c-dark) * 0.1)) var(--colorist-h-dark));
-    --color-accent-1: oklch(0.8 max(0.15, calc(var(--colorist-c-dark) * 0.1)) var(--colorist-h-dark));
-    --color-accent-2: oklch(0.95 max(0.15, calc(var(--colorist-c-dark) * 0.1)) var(--colorist-h-dark));
-  }
 }
 
 // Cupertino
