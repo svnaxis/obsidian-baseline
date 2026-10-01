@@ -12,11 +12,10 @@ body:not(.banner-off) {
 
   &:where(.is-mobile) {
     --banner-image-height: var(--banner-image-height-s);
-
-    .markdown-preview-view:not(.banner),
-    .is-live-preview:not(.banner) {
-      --banner-mobile-offset: 0px;
-    }
+  }
+  &:where(.is-mobile) .banner,
+  &:where(.is-mobile) .banner-icon {
+    --banner-mobile-offset: 1.5rem;
   }
 
   &:not(.is-mobile):not(.show-view-header) {
@@ -24,13 +23,6 @@ body:not(.banner-off) {
   }
   &:not(.is-phone) {
     --view-top-spacing-markdown: 0px;
-  }
-
-  &.is-mobile .banner:not(.banner-icon) {
-    --banner-mobile-offset: 0.5rem;
-  }
-  &.is-mobile .banner.banner-icon {
-    --banner-mobile-offset: 1.5rem;
   }
 
   &:not(.is-phone) .banner-icon.banner-title .inline-title ~ .metadata-container {
@@ -121,6 +113,7 @@ body:not(.banner-off) {
         }
       }
       div:is(.mod-header, .inline-title, .metadata-container) {
+        position: relative;
         z-index: 1;
       }
     }
