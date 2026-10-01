@@ -23,21 +23,14 @@ settings:
 		type: info-text
 		level: 1
 		markdown: true
-		description: Migrate[](https://baseline.svnaxis.me/onboarder/)
-	-
-		id: documentation
-		title: View Documentation
-		type: info-text
-		level: 1
-		markdown: true
-		description: Docs[](https://baseline.svnaxis.me/docs/)
+		description: Migrate[](https://baseline.svnaxis.me/converter/)
 	-
 		id: support
 		title: Support Development
 		type: info-text
 		level: 1
 		markdown: true
-		description: Support[](https://baseline.svnaxis.me/support/)
+		description: Support[](https://www.buymeacoffee.com/svnaxis/)
 	-
 		id: colors
 		title: Colors
@@ -1549,10 +1542,6 @@ settings:
 		title: Hide Migrate
 		type: class-toggle
 	-
-		id: baseline-documentation-off
-		title: Hide Docs
-		type: class-toggle
-	-
 		id: baseline-support-off
 		title: Hide Support
 		type: class-toggle
@@ -1632,7 +1621,7 @@ settings:
 		collapsed: true
     - 
         id: block-width-info
-		description: Requires **Readable line length** in **Editor** settings. [Usage guide](https://baseline.svnaxis.me/docs/features/block-width)
+		description: Requires **Readable line length** in **Editor** settings. [Usage guide](https://github.com/svnaxis/obsidian-baseline#block-width)
         type: info-text
 		markdown: true
 	-
@@ -3586,9 +3575,6 @@ body.baseline-marketplace-off .style-settings-container .setting-item-heading[da
   display: none;
 }
 body.baseline-migration-off .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(2) {
-  display: none;
-}
-body.baseline-documentation-off .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(3) {
   display: none;
 }
 body.baseline-support-off .style-settings-container .setting-item-heading[data-id="info"] + .style-settings-container .setting-item:nth-child(4) {

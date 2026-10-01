@@ -4,11 +4,11 @@
 
 ### The baseline of your thoughts.
 
-_From the creator of [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)_
+_From the creator of [Cupertino](https://github.com/svnaxis/obsidian-cupertino)_
 
-[![](https://img.shields.io/badge/Made%20in-Taiwan-blue?style=for-the-badge)](https://wikipedia.org/wiki/Taiwan)
-[![](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-green?style=for-the-badge&logo=buymeacoffee)](https://www.buymeacoffee.com/sevenaxis)
-[![](https://img.shields.io/badge/Obsidian-Install-purple?style=for-the-badge&logo=obsidian)](https://aaaaalexis.github.io/obsidian-baseline/install?name=Baseline)
+<a href="https://community.obsidian.md/themes/baseline"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Add%20to%20Obsidian.svg?size=default&amp;theme=violet&amp;mode=dark&amp;logo=obsidian"><img alt="badge" src="https://shieldcn.dev/badge/Add%20to%20Obsidian.svg?size=default&amp;theme=violet&amp;mode=light&amp;logo=obsidian"></picture></a>
+<a href="https://buymeacoffee.com/svnaxis"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Buy%20me%20a%20coffee.svg?size=default&amp;theme=amber&amp;mode=dark&amp;logo=buymeacoffee"><img alt="badge" src="https://shieldcn.dev/badge/Buy%20me%20a%20coffee.svg?size=default&amp;theme=amber&amp;mode=light&amp;logo=buymeacoffee"></picture></a>
+<a href="https://wikipedia.org/wiki/Taiwan"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Made%20in-Taiwan.svg?variant=secondary&amp;size=default&amp;mode=dark&amp;logo=ri%3AFaHeart&amp;labelGap=3"><img alt="badge" src="https://shieldcn.dev/badge/Made%20in-Taiwan.svg?variant=secondary&amp;size=default&amp;mode=light&amp;logo=ri%3AFaHeart&amp;labelGap=3"></picture></a>
 
 </div>
 
@@ -18,21 +18,19 @@ _From the creator of [Cupertino](https://github.com/aaaaalexis/obsidian-cupertin
 
 Seamlessly migrate your existing Style Settings from supported themes.
 
-**Carry your settings over with [Style Settings Migration Tool ↗](https://aaaaalexis.github.io/obsidian-baseline/migration)**
+**Carry your settings over with [Style Settings Converter ↗](https://baseline.svnaxis.me/converter/)**
 
 ### Looking for inspiration?
 
 Discover and share Style Settings presets in Baseline Marketplace.
 
-**Explore community-made presets in [Baseline Marketplace ↗](https://aaaaalexis.github.io/obsidian-baseline/marketplace)**
+**Explore community-made presets in [Baseline Marketplace ↗](https://baseline.svnaxis.me/marketplace/)**
 
 ## Overview
 
-### Sleek by default. Yours by design.
+### baseline (_n._) A starting point.
 
-**Beautiful starting point.** Clean layout, organized interface, and subtle animations make Baseline feel effortless from the first install.
-
-![](img/elements.png)
+Clean layout, organized interface, and subtle animations make Baseline feel effortless from the first install.
 
 **Make it yours.** With deep [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) integration, every detail is yours to shape. Colors, spacing, typography, and beyond.
 

@@ -75,7 +75,7 @@ jobs:
             const latestObsidian = installerRelease.data.tag_name.replace(/^v/i, "");
 
             const baselineRelease = await github.rest.repos.getLatestRelease({
-              owner: "aaaaalexis",
+              owner: "svnaxis",
               repo: "obsidian-baseline",
             });
             const latestBaseline = baselineRelease.data.tag_name.replace(/^v/i, "");
