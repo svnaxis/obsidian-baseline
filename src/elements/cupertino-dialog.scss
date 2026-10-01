@@ -4,6 +4,7 @@ body.input-cupertino {
   --menu-background: var(--raised-background);
 
   &.is-translucent {
+    --background-modifier-message: var(--background-primary);
     --modal-background: var(--background-primary) !important;
     --menu-background: var(--background-primary);
   }
