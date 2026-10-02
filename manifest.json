@@ -1,7 +1,7 @@
 {
   "name": "Baseline",
-  "version": "3.2.9",
-  "minAppVersion": "1.11.6",
+  "version": "4.0.0",
+  "minAppVersion": "1.14.0",
   "author": "Alexis C",
   "authorUrl": "https://github.com/svnaxis",
   "fundingUrl": "https://www.buymeacoffee.com/svnaxis"
