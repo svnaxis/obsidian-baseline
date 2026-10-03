@@ -122,20 +122,6 @@ body.input-cupertino.is-phone {
       line-height: var(--touch-size-xl);
     }
   }
-  .modal.mod-community-modal {
-    .modal-header {
-      position: absolute;
-    }
-    .modal-title {
-      height: calc(var(--touch-size-m) + 32px);
-    }
-
-    .modal-content .modal-sidebar,
-    .modal-content .community-modal-info {
-      padding-top: calc(var(--touch-size-m) + 32px);
-      border-radius: var(--modal-radius);
-    }
-  }
 }
 
 body.input-cupertino.is-tablet {

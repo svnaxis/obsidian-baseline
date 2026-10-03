@@ -78,8 +78,12 @@ body.is-frameless:not(.is-mobile).is-popout-modal {
     padding-top: var(--titlebar-height);
   }
 
+  .community-modal-controls > div {
+    -webkit-app-region: no-drag;
+    z-index: 1;
+  }
   .community-modal-search {
-    margin-left: var(--frame-left-space);
+    margin-left: var(--frame-left-space) !important;
   }
 }
 
