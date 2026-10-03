@@ -248,7 +248,7 @@ body.is-phone {
     transform: none !important;
     z-index: 0 !important;
   }
-  .mod-root {
+  .mod-root[style] {
     z-index: 1;
   }
   .mod-root[style*="transform: translateX"] {
@@ -257,13 +257,13 @@ body.is-phone {
     box-shadow: var(--shadow-xs);
   }
 
-  .workspace-drawer-backdrop {
+  .mod-root[style] ~ .workspace-drawer-backdrop {
     opacity: 0 !important;
   }
-  .is-primary-sidedock-open .workspace-drawer-backdrop {
+  .is-primary-sidedock-open .mod-root[style] ~ .workspace-drawer-backdrop {
     left: var(--mobile-sidebar-width);
   }
-  .is-secondary-sidedock-open .workspace-drawer-backdrop {
+  .is-secondary-sidedock-open .mod-root[style] ~ .workspace-drawer-backdrop {
     left: unset;
     right: var(--mobile-sidebar-width);
   }
