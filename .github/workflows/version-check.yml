@@ -3,15 +3,12 @@ name: Check Version Freshness
 on:
   issues:
     types: [opened]
-  issue_comment:
-    types: [created]
 
 permissions:
   issues: write
 
 jobs:
   version-check:
-    if: github.event_name == 'issues'
     runs-on: ubuntu-latest
     steps:
       - name: Compare reported versions against latest releases
@@ -67,7 +64,7 @@ jobs:
             }
 
             // Obsidian's GitHub release tag tracks both the installer build and
-            // the app version it ships, so we use one fetch for both fields.
+            // the app version it ships, so one fetch covers both fields.
             const installerRelease = await github.rest.repos.getLatestRelease({
               owner: "obsidianmd",
               repo: "obsidian-releases",
@@ -96,7 +93,7 @@ jobs:
                 reported: reportedInstaller,
                 latest: latestObsidian,
                 checkInsider: true,
-                howTo: "Download the latest installer from [GitHub release](https://github.com/obsidianmd/obsidian-releases/releases/latest) or [obsidian.md/download](https://obsidian.md/download) and run it. You do not need to uninstall Obsidian first.",
+                howTo: "Download the latest installer from [Obsidian releases on GitHub](https://github.com/obsidianmd/obsidian-releases/releases/latest) or [obsidian.md/download](https://obsidian.md/download) and run it. You do not need to uninstall Obsidian first.",
               },
               {
                 name: "Baseline",
@@ -133,28 +130,28 @@ jobs:
             if (insiderFieldNames.length > 0) {
               sections.push(
                 `**${insiderFieldNames.join(" and ")} — reported version is newer than the latest public release (\`${latestObsidian}\`)**\n` +
-                "This usually means you're on an insider build. Insider builds are pre-release and support is limited. Please check whether this also happens on the latest public release."
+                "This usually means you're on an early access version."
               );
             }
 
             if (unparsedFieldNames.length > 0) {
               sections.push(
                 `**${unparsedFieldNames.join(", ")} — could not read a version number from this field**\n` +
-                "Please edit the issue so it contains just the version number, for example `1.13.2`."
+                "Edit the issue body to include only the version number (for example, `1.13.2`)."
               );
             }
 
             if (sections.length > 0) {
               const closing = (outdatedBlocks.length > 0 || insiderFieldNames.length > 0)
-                ? "Once everything's up to date, let us know if the issue still happens."
-                : "Once that's fixed, we'll take another look.";
+                ? "Once updated, comment below if the issue still occurs."
+                : "Once the version numbers are updated, comment below to proceed.";
 
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
                 body:
-                  "Thanks for filing this issue. Before we look into it, a few things stood out:\n\n" +
+                  "Thanks for opening this issue. Please check the following details before this can be investigated:\n\n" +
                   sections.join("\n\n") +
                   "\n\n" + closing,
               });
@@ -169,31 +166,5 @@ jobs:
                   issue_number: context.issue.number,
                   labels,
                 });
-              }
-            }
-
-  clear-labels:
-    if: >
-      github.event_name == 'issue_comment' &&
-      github.event.comment.user.id == github.event.issue.user.id
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    steps:
-      - name: Remove outdated / insider labels
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const labelsToClear = ["outdated", "insider"];
-            const currentLabels = context.payload.issue.labels.map(l => l.name);
-
-            for (const label of labelsToClear) {
-              if (currentLabels.includes(label)) {
-                await github.rest.issues.removeLabel({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: context.issue.number,
-                  name: label,
-                }).catch(() => {}); // already removed or never applied — fine either way
               }
             }

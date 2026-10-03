@@ -35,7 +35,7 @@ body:
   - type: textarea
     attributes:
       label: Steps to reproduce
-      description: How can we recreate this issue?
+      description: How to recreate this issue?
     validations:
       required: true
   - type: textarea
