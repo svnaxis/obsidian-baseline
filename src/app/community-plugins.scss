@@ -272,3 +272,14 @@ body.minimal-theme .workspace::before {
 .excalidraw {
   --input-height: 32px;
 }
+
+// Calendar https://github.com/liamcain/obsidian-calendar-plugin
+// Calendar Plus https://github.com/mattmaiorana/calendar-plus
+.calendar {
+  table-layout: fixed;
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
