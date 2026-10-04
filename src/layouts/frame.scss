@@ -17,6 +17,7 @@ body.layout-frame:not(.is-mobile) {
     overflow: hidden;
   }
   .mod-root .workspace-tab-container {
+    box-shadow: 0 calc(-1 * var(--tab-outline-width)) var(--tab-outline-color);
     border-radius: 0;
   }
 
@@ -43,7 +44,7 @@ body.layout-frame:not(.is-mobile) {
     right: 8px;
 
     .titlebar-button-container.mod-right {
-      border-top-right-radius: var(--radius-s);
+      border-top-right-radius: var(--radius-window, var(--radius-m));
       overflow: hidden;
     }
   }
@@ -72,6 +73,7 @@ body.layout-frame.is-tablet {
     background-color: var(--mobile-sidebar-background);
   }
   .mod-root .workspace-tab-container {
+    box-shadow: 0 calc(-1 * var(--tab-outline-width)) var(--tab-outline-color);
     border-radius: 0;
   }
   .mod-root,
@@ -87,10 +89,5 @@ body.layout-frame.is-tablet {
   .workspace-drawer-ribbon,
   .workspace-drawer-inner {
     padding-block: 0px 16px;
-  }
-
-  // Tab style
-  &.tab-default .workspace-tab-header-container-inner {
-    padding-top: 8px !important;
   }
 }

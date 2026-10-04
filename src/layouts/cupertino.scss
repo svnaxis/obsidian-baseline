@@ -20,15 +20,6 @@ body:is(.layout-baseline, :not(.css-settings-manager), .layout-fusion) {
     &:not(.status-bar-full) .mod-root {
       padding-bottom: 8px;
     }
-
-    // Windows & Linux fix
-    &:not(.mod-macos).is-hidden-frameless
-      .workspace.is-primary-sidedock-open:not(.is-secondary-sidedock-open)
-      .mod-root
-      .workspace-tabs.mod-top-right-space
-      .workspace-tab-header-container {
-      padding-right: var(--frame-right-space);
-    }
   }
 
   // Editor panel

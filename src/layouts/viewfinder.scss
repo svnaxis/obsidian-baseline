@@ -1,0 +1,50 @@
+body.layout-viewfinder:not(.is-mobile) {
+  &:not(.show-ribbon:not(.hover-ribbon)) .workspace:not(.is-primary-sidedock-open) .mod-root {
+    margin-left: 8px;
+  }
+  .workspace:not(.is-secondary-sidedock-open) .mod-root {
+    margin-right: 8px;
+  }
+  .mod-root {
+    overflow: hidden;
+    background: var(--background-primary);
+    margin-block: 8px;
+    height: auto;
+    border-radius: var(--radius-window, var(--radius-m));
+    border: var(--divider-width) solid var(--background-modifier-border);
+  }
+  .mod-root .workspace-tab-container {
+    box-shadow: 0 calc(-1 * var(--tab-outline-width)) var(--tab-outline-color);
+    border-radius: 0;
+  }
+
+  .mod-sidedock .workspace-tabs.mod-top .workspace-tab-header-container {
+    margin-top: 8px;
+  }
+
+  // Windows & Linux fix
+  &:not(.mod-macos):not(.is-popout-modal).is-hidden-frameless .titlebar {
+    top: 8px;
+    right: 8px;
+
+    .titlebar-button {
+      border-radius: var(--radius-window, var(--radius-m));
+    }
+  }
+}
+
+body.layout-viewfinder.is-tablet {
+  .mod-root {
+    padding-top: 8px;
+    margin: var(--safe-area-inset-top) 8px 8px;
+    height: auto;
+    background: var(--background-primary);
+    border-radius: calc(env(safe-area-inset-bottom) - 8px);
+    border: var(--divider-width) solid var(--background-modifier-border);
+    overflow: hidden;
+  }
+  .mod-root .workspace-tab-container {
+    box-shadow: 0 calc(-1 * var(--tab-outline-width)) var(--tab-outline-color);
+    border-radius: 0;
+  }
+}
