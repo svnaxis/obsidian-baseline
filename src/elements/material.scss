@@ -17,14 +17,12 @@ body.input-material {
   --toggle-thumb-height: 24px;
   --toggle-thumb-width: 24px;
   --toggle-width: 52px;
-  --toggle-s-border-width: var(--toggle-border-width);
-  --toggle-s-thumb-height: var(--toggle-thumb-height);
-  --toggle-s-thumb-width: var(--toggle-thumb-width);
-  --toggle-s-width: var(--toggle-width);
+  --slider-thumb-background: var(--interactive-accent);
   --slider-thumb-border-width: 0;
   --slider-thumb-height: 44px;
   --slider-thumb-width: 4px;
   --slider-thumb-y: -19px;
+  --slider-thumb-shadow: 0 0 0 6px var(--setting-items-background);
   --slider-thumb-radius: 100vh;
   --slider-track-height: 16px;
 
@@ -78,31 +76,60 @@ body.input-material {
     }
   }
 
-  // Slider
-  input[type="range"]::-webkit-slider-thumb {
-    outline: 6px solid var(--setting-items-background);
-    background-color: var(--interactive-accent);
+  // Toggle
+  .checkbox-container:where(:not(.is-disabled)) {
+    cursor: pointer;
   }
-  input[type="range"]:active {
-    --slider-thumb-y: -23px;
-    --slider-thumb-height: 52px;
+  .checkbox-container:where(:not(.is-disabled)):hover:after {
+    box-shadow: 0 0 0 calc(var(--toggle-border-width) + 4px) var(--background-modifier-hover);
+  }
+  .checkbox-container:not(.is-enabled) {
+    --toggle-thumb-color: var(--text-muted);
+    box-shadow: inset 0 0 0 2px var(--text-muted);
+
+    &:not(:active) {
+      --toggle-thumb-width: 16px;
+      --toggle-thumb-height: 16px;
+      --toggle-border-width: 8px;
+      --toggle-s-border-width: var(--toggle-border-width);
+      --toggle-s-thumb-height: var(--toggle-thumb-height);
+      --toggle-s-thumb-width: var(--toggle-thumb-width);
+    }
+    &:where(:not(.is-disabled)):active {
+      --toggle-thumb-width: 32px;
+      --toggle-thumb-height: 32px;
+      --toggle-border-width: 0px;
+      --toggle-s-border-width: var(--toggle-border-width);
+      --toggle-s-thumb-height: var(--toggle-thumb-height);
+      --toggle-s-thumb-width: var(--toggle-thumb-width);
+    }
+  }
+  .checkbox-container.is-enabled {
+    --toggle-thumb-color: var(--text-on-accent);
+  }
+  .checkbox-container.is-enabled:where(:not(.is-disabled)):active {
+    --toggle-thumb-width: 28px;
+    --toggle-thumb-height: 28px;
+    --toggle-border-width: 2px;
+    --toggle-s-border-width: var(--toggle-border-width);
+    --toggle-s-thumb-height: var(--toggle-thumb-height);
+    --toggle-s-thumb-width: var(--toggle-thumb-width);
+
+    &::after {
+      width: var(--toggle-thumb-width);
+      height: var(--toggle-thumb-height);
+      left: 0;
+      margin-top: var(--toggle-border-width);
+    }
   }
 
-  // Toggle
-  .checkbox-container {
+  // Slider
+  input[type="range"]:where(:not(:disabled))::-webkit-slider-thumb {
     cursor: pointer;
 
-    &:not(.is-enabled) {
-      --toggle-thumb-color: var(--text-muted);
-      box-shadow: inset 0 0 0 2px var(--text-muted);
-    }
-    &:not(.is-enabled):not(:hover, :active) {
-      --toggle-s-border-width: 8px;
-      --toggle-s-thumb-height: 16px;
-      --toggle-s-thumb-width: 16px;
-      --toggle-border-width: 8px;
-      --toggle-thumb-height: 16px;
-      --toggle-thumb-width: 16px;
+    &:active {
+      width: 2px;
+      box-shadow: 0 0 0 7px var(--setting-items-background);
     }
   }
 

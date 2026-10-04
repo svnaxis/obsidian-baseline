@@ -31,24 +31,22 @@ body {
   // Dropdown
   --dropdown-padding-start: var(--font-ui-small);
 
-  // Toggle
-  &:not(.accented-interface) .checkbox-container {
-    --interactive-accent: var(--color-green);
-  }
-  &.obsidian-app {
-    --toggle-thumb-color: #fff;
-    --toggle-border-width: 2px;
-    --toggle-s-border-width: var(--toggle-border-width);
-    --toggle-s-thumb-height: var(--toggle-thumb-height);
-    --toggle-s-thumb-width: var(--toggle-thumb-width);
-    --toggle-s-width: var(--toggle-width);
-  }
+  // Toggle & Slider
+  --toggle-thumb-color: #fff;
+  --toggle-border-width: 2px;
+  --toggle-s-border-width: var(--toggle-border-width);
+  --toggle-s-thumb-height: var(--toggle-thumb-height);
+  --toggle-s-thumb-width: var(--toggle-thumb-width);
+  --toggle-s-width: var(--toggle-width) !important;
+  --slider-thumb-background-hover: var(--slider-thumb-background);
+  --slider-thumb-border-width: var(--border-width);
+  --slider-thumb-border-color: var(--background-modifier-hover);
+  --slider-thumb-shadow: 0 0 0 var(--slider-thumb-border-width) var(--slider-thumb-border-color);
+
   &:not(.is-mobile) {
     --toggle-thumb-height: 16px;
     --toggle-thumb-width: 16px;
     --toggle-width: 32px;
-
-    // Slider
     --slider-thumb-y: -5px;
     --slider-thumb-height: 16px;
     --slider-thumb-width: 16px;
@@ -59,6 +57,14 @@ body {
     --toggle-thumb-width: 24px;
     --toggle-width: 48px;
   }
+  &.mod-macos {
+    --slider-thumb-border-width: var(--border-width);
+    --toggle-thumb-opacity-active: 1;
+    --slider-thumb-opacity-active: 1;
+    --slider-thumb-height-active: var(--slider-thumb-height);
+    --slider-thumb-width-active: var(--slider-thumb-width);
+    --slider-thumb-y-active: var(--slider-thumb-y);
+  }
 }
 
 body:is(.input-baseline, :not(.css-settings-manager)) {
@@ -66,15 +72,23 @@ body:is(.input-baseline, :not(.css-settings-manager)) {
   --input-shadow-hover: inset 0 0 0 var(--input-border-width) var(--background-modifier-border-hover);
   --input-font-weight: var(--font-medium);
 
-  // Slider
-  input[type="range"]::-webkit-slider-thumb {
-    border: var(--border-width) solid var(--background-modifier-border);
-  }
-
   // Button
   button:where(:not(.clickable-icon, .ant-switch, .workspace-leaf-content:not([data-type="markdown"]) button, .copy-code-button)):active {
     scale: 0.975;
   }
+
+  // Toggle
+  .checkbox-container::after {
+    box-shadow: none;
+  }
+  .checkbox-container:where(:not(.is-disabled)):active:after {
+    width: calc(var(--toggle-thumb-width) + 4px);
+    height: var(--toggle-thumb-height);
+    margin-top: var(--toggle-border-width);
+  }
+
+  // Slider
+  --slider-thumb-width-active: calc(var(--slider-thumb-width) + 4px);
 }
 
 button:where(:not(.clickable-icon, .ant-switch, .workspace-leaf-content:not([data-type="markdown"]) button, .copy-code-button)) {
@@ -88,33 +102,21 @@ button:where(:not(.clickable-icon, .ant-switch, .workspace-leaf-content:not([dat
 }
 
 // Toggle
-.obsidian-app .checkbox-container {
-  transition: var(--anim-duration-fast);
+body:not(.accented-interface) .checkbox-container {
+  --interactive-accent: var(--color-green);
+}
+.checkbox-container,
+.checkbox-container::after {
   box-shadow: none;
-
-  &::after {
-    box-shadow: none;
-    transition:
-      var(--anim-duration-moderate) var(--anim-motion-baseline),
-      background-color 0s;
-  }
-  &:active:after {
-    box-shadow: none;
-    width: calc(var(--toggle-thumb-width) + var(--toggle-border-width));
-    height: var(--toggle-thumb-height);
-    margin-top: var(--toggle-border-width);
-  }
-  &.is-enabled:active:after {
-    left: calc(-1 * var(--toggle-border-width));
-  }
+  transition:
+    var(--anim-duration-moderate) var(--anim-motion-baseline),
+    background-color var(--anim-duration-moderate);
 }
 
 // Slider
 input[type="range"]::-webkit-slider-thumb {
-  box-shadow: none;
-}
-.slider-value {
-  color: var(--text-faint);
+  border: none;
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
 }
 
 // Hotkey

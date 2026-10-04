@@ -18,57 +18,49 @@ body.input-adwaita {
     padding: 5px 17px;
   }
 
-  // Toggle & Slider
+  // Slider
+  --slider-thumb-border-width: 0;
+  --slider-thumb-y: -8px;
+  --slider-thumb-height: var(--toggle-thumb-height);
+  --slider-thumb-width: var(--toggle-thumb-width);
+  --slider-thumb-radius: var(--toggle-thumb-radius);
+  --slider-thumb-shadow: 0 0 0 var(--border-width) var(--background-modifier-hover), 0 2px 4px hsl(from var(--text-normal) h s l / 20%);
+  --slider-track-height: 4px;
+
+  // Toggle
   --toggle-border-width: 3px;
   --toggle-thumb-height: 20px;
   --toggle-thumb-width: 20px;
-  --toggle-thumb-color: color-mix(in srgb, white 80%, var(--background-primary));
   --toggle-width: 46px;
   --toggle-s-border-width: var(--toggle-border-width);
   --toggle-s-thumb-height: var(--toggle-thumb-height);
   --toggle-s-thumb-width: var(--toggle-thumb-width);
   --toggle-s-width: var(--toggle-width);
 
-  --slider-thumb-border-width: 0;
-  --slider-thumb-y: -8px;
-  --slider-thumb-height: var(--toggle-thumb-height);
-  --slider-thumb-width: var(--toggle-thumb-width);
-  --slider-thumb-radius: var(--toggle-thumb-radius);
-  --slider-track-height: 4px;
-  --slider-track-background: hsl(from var(--text-normal) h s l / 15%);
-  --slider-track-background-hover: hsl(from var(--text-normal) h s l / 20%);
-  --slider-track-background-active: hsl(from var(--text-normal) h s l / 25%);
-
   .checkbox-container::after {
-    box-shadow: 0 2px 4px rgba(0, 0, 6, 20%);
+    box-shadow: var(--slider-thumb-shadow);
   }
-  input[type="range"]::-webkit-slider-thumb {
-    box-shadow:
-      0 0 0 1px rgba(0, 0, 6, 10%),
-      0 2px 4px rgba(0, 0, 6, 20%) !important;
-    background-color: var(--toggle-thumb-color);
-    transition: none;
+  .checkbox-container:where(:not(.is-disabled)):active:after {
+    width: var(--toggle-thumb-width);
+    height: var(--toggle-thumb-height);
+    margin-top: var(--toggle-border-width);
+    left: 0 !important;
   }
-
-  .checkbox-container:not(.is-enabled) {
-    background-color: var(--slider-track-background);
+  .checkbox-container:not(.is-enabled):where(:not(.is-disabled)) {
+    &:hover {
+      background-color: color-mix(in srgb, var(--background-modifier-border-hover), var(--text-normal) 5%);
+    }
+    &:active {
+      background-color: color-mix(in srgb, var(--background-modifier-border-hover), var(--text-normal) 15%);
+    }
   }
-  .checkbox-container:not(.is-enabled):hover,
-  input[type="range"]:hover {
-    background-color: var(--slider-track-background-hover);
-  }
-  .checkbox-container:not(.is-enabled):active,
-  input[type="range"]:active {
-    background-color: var(--slider-track-background-active);
-  }
-
-  .checkbox-container.is-enabled::after,
-  .checkbox-container:hover::after,
-  input[type="range"]:hover::-webkit-slider-thumb,
-  .checkbox-container:active::after,
-  input[type="range"]:active::-webkit-slider-thumb {
-    opacity: 1;
-    background-color: white;
+  .checkbox-container.is-enabled:where(:not(.is-disabled)) {
+    &:hover {
+      background-color: color-mix(in srgb, var(--interactive-accent), var(--text-normal) 5%);
+    }
+    &:active {
+      background-color: color-mix(in srgb, var(--interactive-accent), var(--text-normal) 15%);
+    }
   }
 
   // Dropdown
@@ -135,6 +127,11 @@ body.input-adwaita {
     .setting-search-container,
     .vertical-tab-header-group-container {
       padding: 6px 6px 0;
+    }
+
+    .setting-group .setting-item:not(.setting-item-heading)::before {
+      left: 0;
+      right: 0;
     }
 
     .setting-group .setting-items,

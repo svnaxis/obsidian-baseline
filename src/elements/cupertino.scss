@@ -119,6 +119,7 @@ body.input-cupertino {
   --slider-thumb-height: 16px;
   --slider-thumb-width: 20px;
   --slider-thumb-radius: var(--toggle-thumb-radius);
+  --slider-thumb-shadow: 0 1px 4px hsl(0 0% 0% / 0.07), 0 1px 8px hsl(0 0% 0% / 0.07);
   --slider-track-height: 6px;
   --slider-track-background: var(--background-modifier-border-hover);
 
@@ -126,26 +127,16 @@ body.input-cupertino {
     --slider-thumb-y: -9px;
     --slider-thumb-height: 24px;
     --slider-thumb-width: 37px;
-
-    input[type="range"]::-webkit-slider-thumb:active {
-      scale: 1.4;
-    }
   }
 
-  input[type="range"]::-webkit-slider-thumb {
-    transition: var(--anim-duration-moderate) var(--anim-motion-baseline) !important;
+  input[type="range"]:where(:not(:disabled))::-webkit-slider-thumb:active {
     box-shadow:
-      0 1px 4px hsl(0 0% 0% / 0.075),
-      0 1px 16px hsl(0 0% 0% / 0.1) !important;
-
-    &:active {
-      scale: 1.2;
-      box-shadow:
-        inset 1px 1px 2px -2px hsl(from var(--mono-100) h s l / 1),
-        inset -1px -1px 2px -2px hsl(from var(--mono-100) h s l / 1),
-        var(--shadow-xs) !important;
-      background: var(--raised-background);
-    }
+      0 0 0 1px hsl(0 0% 0% / 0.15),
+      inset 0 0 1px 1px hsl(0 0% 100% / 0.35),
+      0 4px 8px -4px hsl(0 0% 100% / 0.5),
+      0 8px 8px hsl(0 0% 0% / 0.075);
+    background: none;
+    scale: 1.25;
   }
 
   // Toggle
@@ -153,53 +144,31 @@ body.input-cupertino {
   --toggle-thumb-height: 13px;
   --toggle-thumb-width: 21px;
   --toggle-width: 36px;
-  --toggle-s-border-width: var(--toggle-border-width);
-  --toggle-s-thumb-height: var(--toggle-thumb-height);
-  --toggle-s-thumb-width: var(--toggle-thumb-width);
-  --toggle-s-width: var(--toggle-width);
 
   &.is-mobile {
     --toggle-border-width: 2px;
     --toggle-thumb-height: 24px;
     --toggle-thumb-width: 37px;
     --toggle-width: 68px;
-  }
-
-  .checkbox-container {
-    box-shadow: none;
-
-    &:not(:active) {
-      overflow: hidden;
-    }
-
-    &::after {
-      transition: var(--anim-duration-moderate) var(--anim-motion-baseline) !important;
-      box-shadow:
-        0 1px 4px hsl(0 0% 0% / 0.075),
-        0 1px 16px hsl(0 0% 0% / 0.1);
-    }
-    &:active:after {
-      --toggle-border-width: -2.5px;
-      --toggle-thumb-height: 21px;
-      --toggle-thumb-width: 35.5px;
-      --toggle-s-border-width: var(--toggle-border-width);
-      --toggle-s-thumb-height: var(--toggle-thumb-height);
-      --toggle-s-thumb-width: var(--toggle-thumb-width);
-
-      box-shadow:
-        inset 1px 1px 2px -2px hsl(from var(--mono-100) h s l / 1),
-        inset -1px -1px 2px -2px hsl(from var(--mono-100) h s l / 1),
-        var(--shadow-xs);
-      background: var(--raised-background);
-    }
-  }
-  &.is-mobile .checkbox-container:active:after {
-    --toggle-border-width: -6px;
-    --toggle-thumb-height: 40px;
-    --toggle-thumb-width: 59px;
     --toggle-s-border-width: var(--toggle-border-width);
     --toggle-s-thumb-height: var(--toggle-thumb-height);
     --toggle-s-thumb-width: var(--toggle-thumb-width);
+    --toggle-s-width: var(--toggle-width);
+  }
+
+  .checkbox-container::after {
+    box-shadow: var(--slider-thumb-shadow);
+  }
+  .checkbox-container:where(:not(.is-disabled)):active:after {
+    box-shadow:
+      0 0 0 1px hsl(0 0% 0% / 0.15),
+      inset 0 0 1px 1px hsl(0 0% 100% / 0.35),
+      0 4px 8px -4px hsl(0 0% 100% / 0.5),
+      0 8px 8px hsl(0 0% 0% / 0.075);
+    background-color: transparent;
+  }
+  .checkbox-container:not(.is-enabled):where(:not(.is-disabled)):active:after {
+    left: calc(var(--toggle-border-width) * -2);
   }
 
   // Dropdown
