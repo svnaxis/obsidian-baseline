@@ -76,10 +76,10 @@ body.input-cupertino:not(.is-mobile) {
 body.input-cupertino:not(.is-phone) .modal.mod-settings {
   .vertical-tab-header {
     border-radius: calc(var(--modal-radius) - 1px) 0 0 calc(var(--modal-radius) - 1px);
-    margin: var(--border-width) 0 var(--border-width) var(--border-width);
+    margin: var(--divider-width) 0 var(--divider-width) var(--divider-width);
   }
   .vertical-tab-content-container {
-    margin: var(--border-width) var(--border-width) var(--border-width) 0;
+    margin: var(--divider-width) var(--divider-width) var(--divider-width) 0;
   }
 }
 

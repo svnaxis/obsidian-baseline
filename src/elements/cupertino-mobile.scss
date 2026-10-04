@@ -181,9 +181,9 @@ body.input-cupertino.is-phone {
 
     .tree-item:not(.nav-files-container > div > div:nth-child(2)):not(:last-child:only-child):before {
       position: absolute;
-      inset: calc(-1 * (var(--border-width) / 2)) var(--side-padding) auto;
+      inset: calc(-1 * (var(--divider-width) / 2)) var(--side-padding) auto;
       background: var(--setting-items-divider-color);
-      height: var(--border-width);
+      height: var(--divider-width);
       content: "";
     }
 

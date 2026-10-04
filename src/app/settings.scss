@@ -6,7 +6,7 @@ body {
   --setting-items-border-color: var(--background-modifier-hover);
   --setting-items-radius: var(--radius-m);
   --setting-items-padding-y: calc(16px * var(--density-modifier));
-  --setting-items-divider-width: var(--border-width);
+  --setting-items-divider-width: var(--divider-width);
 
   .modal.mod-sidebar-layout {
     .vertical-tab-header-group-container:hover,

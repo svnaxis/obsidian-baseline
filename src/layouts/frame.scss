@@ -7,7 +7,7 @@ body.layout-frame:not(.is-mobile) {
   .workspace-split {
     background-color: var(--background-primary) !important;
     border-radius: var(--radius-window, var(--radius-m));
-    border: var(--border-width) solid var(--background-modifier-border);
+    border: var(--divider-width) solid var(--background-modifier-border);
   }
 
   .workspace-ribbon:not(.is-collapsed) {
@@ -81,7 +81,7 @@ body.layout-frame.is-tablet {
     height: auto;
     background-color: var(--background-primary);
     border-radius: var(--radius-m);
-    border: var(--border-width) solid var(--background-modifier-border);
+    border: var(--divider-width) solid var(--background-modifier-border);
     overflow: hidden;
   }
   .workspace-drawer-ribbon,

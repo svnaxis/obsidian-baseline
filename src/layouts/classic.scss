@@ -3,7 +3,7 @@ body:is(.layout-classic, .layout-minimal) .mod-root .workspace-tab-container {
 }
 
 body:is(.layout-classic, .layout-minimal):not(.is-mobile) {
-  --titlebar-border-width: var(--border-width);
+  --titlebar-border-width: var(--divider-width);
 
   &.mod-macos.is-frameless:not(.is-hidden-frameless) {
     --titlebar-height: 38px;
@@ -22,9 +22,6 @@ body:is(.layout-classic, .layout-minimal):not(.is-mobile) {
   .mod-sidedock > .workspace-leaf-resize-handle {
     border-color: var(--divider-color);
   }
-  &.input-adwaita .mod-sidedock.mod-left-split > .workspace-leaf-resize-handle {
-    border-color: var(--divider-color-alt);
-  }
 
   // Ribbon
   &:not(.hover-ribbon) .workspace-ribbon.is-collapsed {
@@ -37,7 +34,7 @@ body:is(.layout-classic, .layout-minimal):not(.is-mobile) {
 
   // Status bar
   &.status-bar-full {
-    --status-bar-border-width: var(--border-width) 0 0 0;
+    --status-bar-border-width: var(--divider-width) 0 0 0;
   }
 }
 

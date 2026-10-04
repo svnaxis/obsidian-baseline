@@ -64,7 +64,7 @@ body.input-material {
   .dropdown {
     transition: var(--anim-duration-fast);
     box-shadow: inset 0 0 var(--interactive-accent);
-    border-width: 0 0 var(--border-width);
+    border-width: 0 0 var(--divider-width);
     border-style: solid;
     border-color: var(--background-modifier-border-focus);
     border-bottom-right-radius: 0;
