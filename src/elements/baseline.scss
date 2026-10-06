@@ -37,7 +37,7 @@ body {
   --toggle-s-border-width: var(--toggle-border-width);
   --toggle-s-thumb-height: var(--toggle-thumb-height);
   --toggle-s-thumb-width: var(--toggle-thumb-width);
-  --toggle-s-width: var(--toggle-width) !important;
+  --toggle-s-width: var(--toggle-width);
   --slider-thumb-background-hover: var(--slider-thumb-background);
   --slider-thumb-border-width: var(--border-width);
   --slider-thumb-border-color: var(--background-modifier-hover);
@@ -64,6 +64,9 @@ body {
     --slider-thumb-height-active: var(--slider-thumb-height);
     --slider-thumb-width-active: var(--slider-thumb-width);
     --slider-thumb-y-active: var(--slider-thumb-y);
+    --toggle-s-thumb-height: var(--toggle-thumb-height);
+    --toggle-s-thumb-width: var(--toggle-thumb-width);
+    --toggle-s-width: var(--toggle-width);
   }
 }
 
@@ -85,6 +88,9 @@ body:is(.input-baseline, :not(.css-settings-manager)) {
     width: calc(var(--toggle-thumb-width) + 4px);
     height: var(--toggle-thumb-height);
     margin-top: var(--toggle-border-width);
+  }
+  .checkbox-container.is-enabled:where(:not(.is-disabled)):active:after {
+    left: -4px;
   }
 
   // Slider

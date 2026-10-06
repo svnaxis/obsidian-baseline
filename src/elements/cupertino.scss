@@ -166,9 +166,7 @@ body.input-cupertino {
       0 4px 8px -4px hsl(0 0% 100% / 0.5),
       0 8px 8px hsl(0 0% 0% / 0.075);
     background-color: transparent;
-  }
-  .checkbox-container:not(.is-enabled):where(:not(.is-disabled)):active:after {
-    left: calc(var(--toggle-border-width) * -2);
+    left: calc(var(--toggle-border-width) * -2) !important;
   }
 
   // Dropdown

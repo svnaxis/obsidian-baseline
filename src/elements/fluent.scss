@@ -130,6 +130,10 @@ body.input-fluent {
   }
   .checkbox-container.is-enabled {
     --toggle-thumb-color: var(--text-on-accent);
+
+    &:where(:not(.is-disabled)):active:after {
+      left: -4px;
+    }
   }
 
   // Dialog
