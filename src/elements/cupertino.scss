@@ -310,4 +310,10 @@ body.input-cupertino {
     .workspace-tab-header-container-inner {
     gap: calc(8px * var(--density-modifier));
   }
+
+  // Status bar
+  &.status-bar-cupertino .status-bar:hover {
+    background: var(--raised-background);
+    box-shadow: var(--raised-shadow);
+  }
 }
