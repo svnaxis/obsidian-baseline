@@ -1,6 +1,8 @@
 @media screen, print {
   body {
     --metadata-label-width: calc(9em * var(--metadata-label-width-modifier, 1));
+    --metadata-label-font-size: var(--font-smallest);
+    --metadata-input-font-size: var(--font-smallest);
   }
   body.is-phone {
     --metadata-label-width: calc(7.5em * var(--metadata-label-width-modifier, 1));
@@ -20,8 +22,14 @@
     padding-inline: 0;
     width: 100%;
   }
-  .metadata-property-icon::before {
-    display: none;
+  .metadata-property-icon,
+  .text-icon-button {
+    --icon-size: var(--icon-xs);
+    --icon-stroke: var(--icon-xs-stroke-width);
+
+    &::before {
+      display: none;
+    }
   }
   .metadata-property-key {
     padding-inline: 8px;
@@ -46,12 +54,6 @@
   }
   .multi-select-pill {
     line-height: var(--line-height-tight) !important;
-  }
-
-  // Side panels
-  .workspace > .workspace-split:not(.mod-root) .metadata-container .metadata-properties {
-    --metadata-divider-width: 0px;
-    --metadata-gap: 8px;
   }
 
   // Editor panel
@@ -183,17 +185,9 @@
         background-color: var(--background-primary-alt);
       }
 
-      .metadata-property {
-        min-height: 44px;
-      }
-      .metadata-property-icon,
-      .text-icon-button {
-        --icon-size: var(--icon-s);
-        --icon-stroke: var(--icon-s-stroke-width);
-      }
       .metadata-property-key,
       .text-icon-button {
-        padding: 8px 16px;
+        padding: 4px 16px;
       }
     }
 
@@ -212,21 +206,5 @@
   // Compact Metadata
   body.metadata-compact {
     --metadata-gap: 0px;
-
-    .metadata-container {
-      font-size: var(--font-small);
-    }
-    .metadata-property-icon {
-      --icon-size: var(--icon-xs);
-      --icon-stroke: var(--icon-xs-stroke-width);
-    }
-
-    &.metadata-cupertino .metadata-container .metadata-property {
-      min-height: unset;
-    }
-    &.metadata-cupertino .metadata-container .metadata-property-key,
-    &.metadata-cupertino .metadata-container .text-icon-button {
-      padding: 4px 12px;
-    }
   }
 }
