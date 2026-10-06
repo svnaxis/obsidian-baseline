@@ -147,9 +147,9 @@ body.layout-fusion:not(.is-mobile) {
 
   // Settings
   .modal.mod-settings .vertical-tab-header {
-    margin: 8px 0 8px 8px;
+    margin: 8px 0 8px 8px !important;
     box-shadow: var(--shadow-surface);
-    border-radius: max(calc(var(--modal-radius) - 8px), var(--radius-s));
+    border-radius: max(calc(var(--modal-radius) - 8px), var(--radius-s)) !important;
     background: var(--raised-background);
   }
 }
@@ -215,6 +215,10 @@ body.layout-macos:not(.is-phone) {
   }
   &:is(.tab-floating, .tab-floating-center) {
     --tab-outline-color: transparent;
+  }
+
+  .mod-sidedock > .workspace-leaf-resize-handle:not(:hover) {
+    border-color: var(--divider-color);
   }
 
   .modal.mod-settings .vertical-tab-header {

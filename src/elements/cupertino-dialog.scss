@@ -30,16 +30,14 @@ body.input-cupertino {
 body.input-cupertino:not(.is-mobile) {
   .menu,
   .suggestion-container {
-    .menu-item,
-    .suggestion-item {
+    .menu-item {
       padding: calc(4px * var(--density-modifier)) 12px;
-    }
-    .suggestion-item {
-      min-height: 32px;
-      justify-content: space-between;
     }
     .menu-separator {
       margin: 6px 8px;
+    }
+    .suggestion-item {
+      padding: calc(8px * var(--density-modifier)) 12px;
     }
   }
 
