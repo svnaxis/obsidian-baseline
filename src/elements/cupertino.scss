@@ -108,7 +108,7 @@ body.input-cupertino {
     .clickable-icon.has-active-menu,
     .modal-header-button:hover,
     .search-input-container input {
-      box-shadow: var(--shadow-xs);
+      box-shadow: var(--raised-shadow);
       background: var(--raised-background);
     }
   }
@@ -230,7 +230,7 @@ body.input-cupertino {
 
       .workspace-tab-header.is-active {
         background: var(--raised-background);
-        box-shadow: var(--shadow-xs);
+        box-shadow: var(--raised-shadow);
       }
     }
 
@@ -265,7 +265,7 @@ body.input-cupertino {
   &:not(.nav-action-center, .nav-action-left) .mod-sidedock .workspace-leaf-content .nav-header:first-child .nav-buttons-container {
     border-radius: var(--clickable-icon-radius);
     padding: 4px;
-    box-shadow: var(--shadow-xs);
+    box-shadow: var(--raised-shadow);
     background: var(--raised-background);
     gap: 0;
 

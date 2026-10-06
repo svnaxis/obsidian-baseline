@@ -254,7 +254,7 @@ body.is-phone {
   .mod-root[style*="transform: translateX"] {
     border-radius: var(--safe-area-inset-top);
     overflow: hidden;
-    box-shadow: var(--shadow-xs);
+    box-shadow: var(--raised-shadow);
   }
 
   .mod-root[style] ~ .workspace-drawer-backdrop {

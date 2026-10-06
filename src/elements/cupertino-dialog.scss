@@ -237,7 +237,7 @@ body.input-cupertino:not(.is-mobile) .notice {
 }
 
 body.input-cupertino.is-mobile .notice {
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--raised-shadow);
 
   &:last-child {
     @starting-style {

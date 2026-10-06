@@ -177,7 +177,7 @@ body.is-phone {
 // Notice & Tooltop
 body {
   --tooltip-radius: var(--radius-m);
-  --tooltip-shadow: var(--shadow-xs);
+  --tooltip-shadow: var(--raised-shadow);
 }
 .notice-container {
   display: flex;
