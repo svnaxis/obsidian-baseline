@@ -147,7 +147,7 @@ body.layout-fusion:not(.is-mobile) {
 
   // Settings
   .modal.mod-settings .vertical-tab-header {
-    margin: 8px 0 8px 8px !important;
+    margin: 8px 0 8px 8px;
     box-shadow: var(--shadow-surface);
     border-radius: max(calc(var(--modal-radius) - 8px), var(--radius-s)) !important;
     background: var(--raised-background);
@@ -223,6 +223,16 @@ body.layout-macos:not(.is-phone) {
 
   .modal.mod-settings .vertical-tab-header {
     background-color: var(--background-secondary);
+    border-right: var(--divider-width) solid var(--divider-color);
+  }
+  &.input-cupertino:not(.is-popout-modal) .modal.mod-settings {
+    .vertical-tab-header {
+      border-radius: calc(var(--modal-radius) - 1px) 0 0 calc(var(--modal-radius) - 1px);
+      margin: var(--divider-width) 0 var(--divider-width) var(--divider-width);
+    }
+    .vertical-tab-content-container {
+      margin: var(--divider-width) var(--divider-width) var(--divider-width) 0;
+    }
   }
 }
 

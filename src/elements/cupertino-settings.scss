@@ -73,16 +73,6 @@ body.input-cupertino:not(.is-mobile) {
   }
 }
 
-body.input-cupertino:not(.is-phone) .modal.mod-settings {
-  .vertical-tab-header {
-    border-radius: calc(var(--modal-radius) - 1px) 0 0 calc(var(--modal-radius) - 1px);
-    margin: var(--divider-width) 0 var(--divider-width) var(--divider-width);
-  }
-  .vertical-tab-content-container {
-    margin: var(--divider-width) var(--divider-width) var(--divider-width) 0;
-  }
-}
-
 body.input-cupertino.is-mobile {
   .modal.mod-settings .vertical-tab-nav-item .vertical-tab-nav-item-icon {
     padding: 5px;
