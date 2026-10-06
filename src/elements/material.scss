@@ -116,10 +116,10 @@ body.input-material {
     --toggle-s-thumb-width: var(--toggle-thumb-width);
 
     &::after {
-      width: var(--toggle-thumb-width);
-      height: var(--toggle-thumb-height);
+      width: var(--toggle-thumb-width) !important;
+      height: var(--toggle-thumb-height) !important;
+      margin-top: var(--toggle-border-width) !important;
       left: 0;
-      margin-top: var(--toggle-border-width);
     }
   }
 

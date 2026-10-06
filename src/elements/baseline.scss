@@ -85,9 +85,9 @@ body:is(.input-baseline, :not(.css-settings-manager)) {
     box-shadow: none;
   }
   .checkbox-container:where(:not(.is-disabled)):active:after {
-    width: calc(var(--toggle-thumb-width) + 4px);
-    height: var(--toggle-thumb-height);
-    margin-top: var(--toggle-border-width);
+    width: calc(var(--toggle-thumb-width) + 4px) !important;
+    height: var(--toggle-thumb-height) !important;
+    margin-top: var(--toggle-border-width) !important;
   }
   .checkbox-container.is-enabled:where(:not(.is-disabled)):active:after {
     left: -4px;

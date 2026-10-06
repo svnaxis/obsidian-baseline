@@ -41,9 +41,9 @@ body.input-adwaita {
     box-shadow: var(--slider-thumb-shadow);
   }
   .checkbox-container:where(:not(.is-disabled)):active:after {
-    width: var(--toggle-thumb-width);
-    height: var(--toggle-thumb-height);
-    margin-top: var(--toggle-border-width);
+    width: var(--toggle-thumb-width) !important;
+    height: var(--toggle-thumb-height) !important;
+    margin-top: var(--toggle-border-width) !important;
     left: 0 !important;
   }
   .checkbox-container:not(.is-enabled):where(:not(.is-disabled)) {

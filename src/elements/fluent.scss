@@ -120,9 +120,9 @@ body.input-fluent {
     --toggle-s-thumb-width: var(--toggle-thumb-width);
   }
   .checkbox-container:where(:not(.is-disabled)):active:after {
-    width: calc(var(--toggle-thumb-width) + 4px);
-    height: var(--toggle-thumb-height);
-    margin-top: var(--toggle-border-width);
+    width: calc(var(--toggle-thumb-width) + 4px) !important;
+    height: var(--toggle-thumb-height) !important;
+    margin-top: var(--toggle-border-width) !important;
   }
   .checkbox-container:not(.is-enabled) {
     --toggle-thumb-color: var(--color-base-100);
