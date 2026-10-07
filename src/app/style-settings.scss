@@ -2744,9 +2744,6 @@ settings:
 				label: Filled
 				value: callouts-default
 			-
-				label: Tactile
-				value: callouts-tactile
-			-
 				label: Padded
 				value: callouts-padded
 			-
@@ -2788,19 +2785,6 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
-	-
-		id: code-style
-		title: Code style
-		type: class-select
-		allowEmpty: false
-		default: code-default
-		options:
-			-
-				label: Filled
-				value: code-default
-			-
-				label: Tactile
-				value: code-tactile
 	-
 		id: code-size
 		title: Code font size

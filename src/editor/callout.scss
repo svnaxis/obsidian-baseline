@@ -1,7 +1,7 @@
 @media screen, print {
   body {
     --callout-blend-mode: normal;
-    --callout-border-width: var(--divider-width);
+    --callout-border-width: var(--border-width);
     --callout-border-opacity: 0.15;
     --callout-padding: 16px;
     --callout-radius: var(--radius-s);
@@ -26,7 +26,6 @@
     }
 
     .callout-title {
-      align-items: center;
       gap: 8px;
     }
 
@@ -51,14 +50,8 @@
     --callout-color: var(--color-accent);
   }
 
-  // Callout: Tactile
-  body.callouts-tactile .callout:not([data-callout="note-toolbar"]) {
-    box-shadow: var(--shadow-tactile);
-    background: linear-gradient(hsl(from var(--callout-color) h s l / 0.1), hsl(from var(--callout-color) h s l / 0.175));
-  }
-
-  // Callout: Tactile on Cupertino
-  body.callouts-tactile.input-cupertino .callout:not([data-callout="note-toolbar"]) {
+  // Callout: Cupertino
+  body.callouts-default.input-cupertino .callout:not([data-callout="note-toolbar"]) {
     box-shadow:
       0 0 0 0.5pt hsl(from var(--callout-color) h s l / var(--callout-border-opacity)),
       var(--raised-shadow);
@@ -69,10 +62,10 @@
 
   // Callout: Padded
   body.callouts-padded.theme-light .callout:not([data-callout="note-toolbar"]) {
-    background-color: hsl(from var(--callout-color) h s l / 0.2);
+    background-color: hsl(from var(--callout-color) h s l / 0.15);
 
     .callout-content {
-      --callout-content-background: color-mix(in srgb, var(--callout-color) 10%, var(--background-primary));
+      --callout-content-background: color-mix(in srgb, var(--callout-color) 5%, var(--background-primary));
     }
   }
   body.callouts-padded.theme-dark .callout:not([data-callout="note-toolbar"]) {
@@ -84,18 +77,18 @@
   }
   body.callouts-padded .callout:not([data-callout="note-toolbar"]) {
     --callout-border-width: 0;
-    --callout-padding: 4px;
+    --callout-padding: 0;
     --callout-content-padding: 16px;
     --callout-radius: var(--radius-s);
 
     position: relative;
 
     .callout-icon {
-      width: 56px;
+      width: 48px;
       position: absolute;
       opacity: 0.2;
       right: 16px;
-      top: 8px;
+      bottom: -8px;
     }
 
     .callout-icon svg.svg-icon {
@@ -104,14 +97,14 @@
     }
 
     .callout-title {
-      padding: 12px 12px 16px;
+      padding: 16px;
       overflow: hidden;
       position: relative;
     }
 
     .callout-content {
       border-radius: calc(var(--callout-radius) - 4px);
-      margin-left: 0 !important;
+      margin: 0 4px 4px !important;
       background: var(--callout-content-background);
     }
 
@@ -123,13 +116,13 @@
   // Callout: Outlined
   body.callouts-outlined {
     .callout:not([data-callout="note-toolbar"]) {
-      --callout-border-width: var(--border-width);
+      --callout-border-opacity: 0.3;
 
       background-color: transparent;
       position: relative;
       overflow: visible;
 
-      .callout-title {
+      .callout-title:not(:only-child) {
         transform: translateY(-1.75rem);
         width: fit-content;
         padding: 0 8px;
