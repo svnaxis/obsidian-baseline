@@ -225,13 +225,13 @@ body.layout-macos:not(.is-phone) {
     background-color: var(--background-secondary);
     border-right: var(--divider-width) solid var(--divider-color);
   }
-  &.input-cupertino:not(.is-popout-modal) .modal.mod-settings {
+  &.input-cupertino.theme-dark:not(.is-popout-modal) .modal.mod-settings {
     .vertical-tab-header {
-      border-radius: calc(var(--modal-radius) - 1px) 0 0 calc(var(--modal-radius) - 1px);
-      margin: var(--divider-width) 0 var(--divider-width) var(--divider-width);
+      border-radius: calc(var(--modal-radius) - 0.5pt) 0 0 calc(var(--modal-radius) - 0.5pt);
+      margin: 0.5pt 0 0.5pt 0.5pt;
     }
     .vertical-tab-content-container {
-      margin: var(--divider-width) var(--divider-width) var(--divider-width) 0;
+      margin: 0.5pt 0.5pt 0.5pt 0;
     }
   }
 }
