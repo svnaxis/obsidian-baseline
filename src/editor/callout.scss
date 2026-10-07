@@ -57,6 +57,16 @@
     background: linear-gradient(hsl(from var(--callout-color) h s l / 0.1), hsl(from var(--callout-color) h s l / 0.175));
   }
 
+  // Callout: Tactile on Cupertino
+  body.callouts-tactile.input-cupertino .callout:not([data-callout="note-toolbar"]) {
+    box-shadow:
+      0 0 0 0.5pt hsl(from var(--callout-color) h s l / var(--callout-border-opacity)),
+      var(--raised-shadow);
+    background: var(--raised-background);
+    background-color: hsl(from var(--callout-color) h s l / 0.15);
+    border: none;
+  }
+
   // Callout: Padded
   body.callouts-padded.theme-light .callout:not([data-callout="note-toolbar"]) {
     background-color: hsl(from var(--callout-color) h s l / 0.2);
