@@ -4,10 +4,10 @@ body.input-cupertino.is-mobile {
     --icon-size: var(--icon-l);
     background-color: currentColor;
     content: "";
-    -webkit-mask-position: 25% 50%;
-    -webkit-mask-size: 80% 80%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='21' fill='none' viewBox='0 0 12 21'%3e%3cpath fill='white' d='M0 10.372c0 .397.141.732.459 1.046l9.137 8.934c.256.266.575.395.953.395a1.35 1.35 0 0 0 1.372-1.354c0-.382-.163-.718-.422-.983l-8.24-8.04 8.24-8.036c.261-.266.422-.61.422-.98A1.349 1.349 0 0 0 10.549 0c-.38 0-.697.129-.953.385L.459 9.327A1.397 1.397 0 0 0 0 10.372Z'/%3e%3c/svg%3e");
+    mask-position: 25% 50%;
+    mask-size: 80% 80%;
+    mask-repeat: no-repeat;
+    mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='21' fill='none' viewBox='0 0 12 21'%3e%3cpath fill='white' d='M0 10.372c0 .397.141.732.459 1.046l9.137 8.934c.256.266.575.395.953.395a1.35 1.35 0 0 0 1.372-1.354c0-.382-.163-.718-.422-.983l-8.24-8.04 8.24-8.036c.261-.266.422-.61.422-.98A1.349 1.349 0 0 0 10.549 0c-.38 0-.697.129-.953.385L.459 9.327A1.397 1.397 0 0 0 0 10.372Z'/%3e%3c/svg%3e");
   }
 
   .workspace-drawer .nav-buttons-container {
