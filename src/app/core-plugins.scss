@@ -36,27 +36,15 @@ body:not(.is-mobile) .backlink-pane {
 }
 
 // Canvas
-
-body:not(.is-mobile) {
-  .canvas-control-group:not(:hover),
-  .canvas-card-menu:not(:hover) {
-    opacity: 0.5;
-  }
-}
-
-.canvas-control-group {
-  border: none;
-  transition: var(--anim-duration-fast);
-}
-
 .canvas-card-menu {
-  transition: var(--anim-duration-fast);
-  padding: 8px;
   gap: 4px;
-}
-.canvas-card-menu .canvas-card-menu-button {
-  --icon-size: 24px;
+  backdrop-filter: var(--blur-m);
+  box-shadow: none;
+  border: var(--border-width) solid var(--background-modifier-hover);
+  background-color: color-mix(in srgb, var(--background-secondary) var(--blur-opacity-m), transparent) !important;
+  padding: 8px;
 }
 .canvas-card-menu .canvas-card-menu-button svg {
-  transition: var(--anim-duration-moderate) var(--anim-motion-baseline) !important;
+  --icon-size: 24px;
+  fill: none;
 }
