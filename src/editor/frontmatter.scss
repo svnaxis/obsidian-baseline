@@ -40,7 +40,7 @@
     border-bottom: none !important;
   }
 
-  .metadata-input-longtext:not(:focus) {
+  .metadata-container .metadata-input-longtext:not(:focus) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: pre;
