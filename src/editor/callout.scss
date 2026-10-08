@@ -43,6 +43,7 @@
 
     .callout-content {
       margin-left: calc(var(--icon-size) + 8px);
+      overflow-x: unset;
     }
   }
 
