@@ -396,7 +396,8 @@
     color: var(--text-highlight, var(--text-normal));
   }
 
-  .cm-s-obsidian span.cm-highlight {
+  .cm-s-obsidian span.cm-highlight,
+  .cm-s-obsidian span.cm-highlight-color-widget {
     box-decoration-break: clone;
     padding-block: 2px;
   }
@@ -435,7 +436,7 @@
     .image-embed:not([width]) > .image-wrapper,
     iframe,
     video,
-    img:not([width], .cm-widgetBuffer, .link-favicon, .emoji, [alt="banner"]) {
+    img:not([width], .cm-widgetBuffer, .link-favicon, .emoji, .highlight-swatch, [alt="banner"]) {
       width: 100%;
       padding: 0;
     }
@@ -444,7 +445,7 @@
   body:is(.media-width-full, :not(.css-settings-manager)) .cm-content {
     iframe,
     video,
-    img:not([width], .cm-widgetBuffer, .link-favicon, .emoji, [alt="banner"]) {
+    img:not([width], .cm-widgetBuffer, .link-favicon, .emoji, .highlight-swatch, [alt="banner"]) {
       background: var(--background-primary-alt);
       max-height: 75vh;
       object-fit: contain;
