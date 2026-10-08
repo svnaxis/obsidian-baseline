@@ -307,6 +307,7 @@ body.input-cupertino {
 
   // Status bar
   &.status-bar-cupertino .status-bar:hover {
+    backdrop-filter: var(--blur-m);
     background: var(--raised-background);
     box-shadow: var(--raised-shadow);
   }
