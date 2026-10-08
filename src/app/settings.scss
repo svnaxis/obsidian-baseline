@@ -9,11 +9,6 @@ body {
   --setting-items-divider-width: var(--divider-width);
 
   .modal.mod-sidebar-layout {
-    .vertical-tab-header-group-container:hover,
-    .vertical-tab-content:hover {
-      will-change: transform;
-    }
-
     .vertical-tab-header {
       border-right: none;
       background-color: transparent;
@@ -67,6 +62,7 @@ body.is-frameless:not(.is-mobile).is-popout-modal {
     background-color: transparent;
     border: none;
     z-index: 1;
+    padding-top: 0;
   }
   .titlebar-text {
     display: none;
@@ -78,7 +74,9 @@ body.is-frameless:not(.is-mobile).is-popout-modal {
     padding-top: var(--titlebar-height);
   }
 
+  .vertical-tab-content > div,
   .community-modal-controls > div {
+    position: relative;
     -webkit-app-region: no-drag;
     z-index: 1;
   }
