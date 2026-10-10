@@ -7,6 +7,7 @@ body.input-cupertino {
     --background-modifier-message: var(--background-primary);
     --modal-background: var(--background-primary) !important;
     --menu-background: var(--background-primary);
+    --status-bar-background: var(--background-primary) !important;
   }
 
   .prompt,
@@ -257,5 +258,17 @@ body.input-cupertino:not(.is-mobile) {
     box-shadow: var(--shadow-l);
     padding: 8px 12px;
     border-radius: var(--radius-m);
+  }
+}
+
+// Status bar
+body.input-cupertino:not(.is-mobile).status-bar-cupertino {
+  --status-bar-background: var(--raised-background);
+  --status-bar-text-color: var(--text-normal);
+
+  .status-bar:hover {
+    backdrop-filter: var(--blur-l);
+    background: var(--status-bar-background);
+    box-shadow: var(--raised-shadow);
   }
 }
