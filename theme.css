@@ -8278,8 +8278,8 @@ body.is-phone {
   --bases-embed-width: unset;
   --bases-embed-transform: none;
 }
-body.is-phone .markdown-preview-sizer > .el-pre .bases-embed,
-body.is-phone .markdown-preview-sizer > .el-p .bases-embed,
+body.is-phone .markdown-preview-sizer > .el-pre > .bases-embed,
+body.is-phone .markdown-preview-sizer > .el-p > p > .bases-embed,
 body.is-phone .cm-content > .bases-embed,
 body.is-phone .cm-content > .cm-lang-base {
   max-width: 100cqw !important;
@@ -11567,12 +11567,12 @@ body:not(.block-width-off) .table-100 .markdown-preview-sizer > .el-table tbody 
 body:not(.block-width-off) .table-100 .cm-content > .cm-table-widget tbody tr:last-child > td {
   border-block-end-width: 0;
 }
-body:not(.block-width-off):is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-pre .bases-embed,
-body:not(.block-width-off):is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-p .bases-embed,
+body:not(.block-width-off):is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-pre > .bases-embed,
+body:not(.block-width-off):is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-p > p > .bases-embed,
 body:not(.block-width-off):is(.bases-wide, .bases-max, .bases-100) .cm-content > .bases-embed,
 body:not(.block-width-off):is(.bases-wide, .bases-max, .bases-100) .cm-content > .cm-lang-base,
-body:not(.block-width-off) div:is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-pre .bases-embed,
-body:not(.block-width-off) div:is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-p .bases-embed,
+body:not(.block-width-off) div:is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-pre > .bases-embed,
+body:not(.block-width-off) div:is(.bases-wide, .bases-max, .bases-100) .markdown-preview-sizer > .el-p > p > .bases-embed,
 body:not(.block-width-off) div:is(.bases-wide, .bases-max, .bases-100) .cm-content > .bases-embed,
 body:not(.block-width-off) div:is(.bases-wide, .bases-max, .bases-100) .cm-content > .cm-lang-base {
   max-width: var(--bases-line-max-width) !important;

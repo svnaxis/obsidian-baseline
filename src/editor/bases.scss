@@ -110,8 +110,8 @@ body.is-phone {
   --bases-embed-width: unset;
   --bases-embed-transform: none;
 
-  .markdown-preview-sizer > .el-pre .bases-embed,
-  .markdown-preview-sizer > .el-p .bases-embed,
+  .markdown-preview-sizer > .el-pre > .bases-embed,
+  .markdown-preview-sizer > .el-p > p > .bases-embed,
   .cm-content > .bases-embed,
   .cm-content > .cm-lang-base {
     max-width: 100cqw !important;
