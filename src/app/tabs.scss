@@ -264,15 +264,17 @@ body.is-tablet.tab-floating-center {
       }
     }
   }
-  .mod-root:has(+ .workspace-drawer.is-pinned.mod-right) .workspace-tabs:not(.mod-stacked) {
-    @container (min-width: 560px) {
-      // Single pane
-      &.mod-top-left-space.mod-top-right-space .workspace-tab-header-container-inner {
-        padding-left: var(--tab-action-width);
-      }
-      // Right pane
-      &:not(.mod-top-left-space).mod-top-right-space .workspace-tab-header-container-inner {
-        padding-left: calc(var(--tab-action-width) * 2);
+  @media (pointer: coarse) {
+    .mod-root:has(+ .workspace-drawer.is-pinned.mod-right) .workspace-tabs:not(.mod-stacked) {
+      @container (min-width: 560px) {
+        // Single pane
+        &.mod-top-left-space.mod-top-right-space .workspace-tab-header-container-inner {
+          padding-left: var(--tab-action-width);
+        }
+        // Right pane
+        &:not(.mod-top-left-space).mod-top-right-space .workspace-tab-header-container-inner {
+          padding-left: calc(var(--tab-action-width) * 2);
+        }
       }
     }
   }

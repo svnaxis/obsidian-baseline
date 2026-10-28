@@ -81,16 +81,12 @@
         display: inline-flex;
         border-radius: var(--radius-s);
         width: 4px;
-        inset-block: 0;
+        height: 1lh;
         content: "";
         position: absolute;
-        inset-inline-start: 0;
+        inset: auto 0 0;
         transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
       }
-    }
-
-    .HyperMD-header:not(.cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):has(> br:only-child) + .cm-line.HyperMD-header)::before {
-      margin-top: var(--p-spacing);
     }
 
     .markdown-rendered h1::before,
@@ -156,10 +152,6 @@
 
     .markdown-source-view:not(.is-live-preview) .cm-line.HyperMD-header::after {
       inset-block: 0;
-    }
-
-    .HyperMD-header:not(.cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):has(> br:only-child) + .cm-line.HyperMD-header)::after {
-      margin-top: var(--p-spacing);
     }
 
     .markdown-rendered h1::after,

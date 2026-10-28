@@ -108,7 +108,7 @@ body:not(.block-width-off) {
   &:is(.img-wide, .img-max, .img-100),
   div:is(.img-wide, .img-max, .img-100) {
     .markdown-preview-sizer .image-embed:not([width]),
-    .markdown-preview-sizer p > img:not([width], .cm-widgetBuffer, .link-favicon, .emoji, .highlight-swatch, [alt="banner"]),
+    .markdown-preview-sizer p > img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt="banner"]),
     .cm-content .image-embed {
       display: block;
       max-width: var(--img-line-max-width) !important;

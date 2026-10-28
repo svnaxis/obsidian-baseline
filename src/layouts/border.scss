@@ -125,12 +125,14 @@ body.layout-border.is-tablet {
     border-top-left-radius: var(--tab-radius);
     border-bottom-left-radius: var(--tab-radius);
   }
-  .mod-root:has(+ .workspace-drawer.is-pinned.mod-right) {
-    padding-right: 0;
-  }
-  .mod-root:has(+ .workspace-drawer.mod-right:not(.is-pinned)) > div:last-of-type .workspace-tab-container {
-    border-top-right-radius: var(--tab-radius);
-    border-bottom-right-radius: var(--tab-radius);
+  @media (pointer: coarse) {
+    .mod-root:has(+ .workspace-drawer.is-pinned.mod-right) {
+      padding-right: 0;
+    }
+    .mod-root:has(+ .workspace-drawer.mod-right:not(.is-pinned)) > div:last-of-type .workspace-tab-container {
+      border-top-right-radius: var(--tab-radius);
+      border-bottom-right-radius: var(--tab-radius);
+    }
   }
 
   // Side panels

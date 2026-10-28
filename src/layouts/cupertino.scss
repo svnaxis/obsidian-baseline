@@ -33,16 +33,24 @@ body:is(.layout-baseline, :not(.css-settings-manager), .layout-fusion) {
     }
   }
 
-  &.is-tablet {
-    .workspace-drawer.is-pinned.mod-left + .mod-root,
-    .mod-root:has(+ .workspace-drawer.is-pinned.mod-right) {
-      padding-bottom: 8px;
-    }
-    .workspace-drawer.is-pinned.mod-left + .mod-root:has(+ .workspace-drawer.mod-right:not(.is-pinned)) .workspace-tabs:last-of-type .workspace-tab-container {
-      margin-right: 8px;
-    }
-    .workspace-drawer.mod-left:not(.is-pinned) + .mod-root:has(+ .workspace-drawer.is-pinned.mod-right) .workspace-tabs:first-of-type .workspace-tab-container {
-      margin-left: 8px;
+  @media (pointer: coarse) {
+    &.is-tablet {
+      .workspace-drawer.is-pinned.mod-left + .mod-root,
+      .mod-root:has(+ .workspace-drawer.is-pinned.mod-right) {
+        padding-bottom: 8px;
+      }
+      .workspace-drawer.is-pinned.mod-left
+        + .mod-root:has(+ .workspace-drawer.mod-right:not(.is-pinned))
+        .workspace-tabs:last-of-type
+        .workspace-tab-container {
+        margin-right: 8px;
+      }
+      .workspace-drawer.mod-left:not(.is-pinned)
+        + .mod-root:has(+ .workspace-drawer.is-pinned.mod-right)
+        .workspace-tabs:first-of-type
+        .workspace-tab-container {
+        margin-left: 8px;
+      }
     }
   }
 }

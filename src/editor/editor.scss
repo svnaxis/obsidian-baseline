@@ -25,13 +25,10 @@
 
     --h1-weight: var(--font-medium);
     --h2-weight: var(--font-medium);
-    --h3-weight: var(--font-medium);
+    --h3-weight: var(--font-semibold);
     --h4-weight: var(--font-medium);
-    --h5-weight: var(--font-medium);
+    --h5-weight: var(--font-semibold);
     --h6-weight: var(--font-medium);
-
-    --h4-color: var(--text-muted);
-    --h6-color: var(--text-muted);
 
     --h1-line-height: var(--line-height-normal);
     --h2-line-height: var(--line-height-normal);
@@ -320,13 +317,6 @@
     text-wrap: pretty;
     letter-spacing: normal;
   }
-  .markdown-source-view.is-live-preview .HyperMD-header {
-    padding-top: var(--heading-spacing) !important;
-
-    &:first-child {
-      padding-top: 0 !important;
-    }
-  }
 
   .markdown-rendered h1,
   .HyperMD-header-1,
@@ -459,7 +449,7 @@
     .image-embed:not([width]) > .image-wrapper,
     iframe,
     video,
-    img:not([width], .cm-widgetBuffer, .link-favicon, .emoji, .highlight-swatch, [alt="banner"]) {
+    img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt="banner"]) {
       width: 100%;
       padding: 0;
     }
@@ -468,7 +458,7 @@
   body:is(.media-width-full, :not(.css-settings-manager)) .cm-content {
     iframe,
     video,
-    img:not([width], .cm-widgetBuffer, .link-favicon, .emoji, .highlight-swatch, [alt="banner"]) {
+    img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt="banner"]) {
       background: var(--background-primary-alt);
       max-height: 75vh;
       object-fit: contain;
@@ -483,14 +473,14 @@
     .image-embed > .image-wrapper,
     iframe,
     video,
-    img:not(.cm-widgetBuffer, .link-favicon, .emoji, [alt="banner"]) {
+    img:not(.link-favicon, .emoji, [alt="banner"]) {
       display: flex;
       justify-self: center;
     }
   }
 
   body.theme-dark.media-muted div:is(.markdown-preview-sizer, .cm-content, .markdown-embed, .bases-view) {
-    img:not(.cm-widgetBuffer, .link-favicon, .emoji, [alt="banner"]),
+    img:not(.link-favicon, .emoji, [alt="banner"]),
     .bases-cards-cover {
       transition: opacity var(--anim-duration-moderate);
 
@@ -534,12 +524,7 @@
       --p-spacing: 4px;
       display: flex;
       gap: var(--img-grid-gap, 4px);
-
       line-height: 0;
-
-      br {
-        display: none;
-      }
 
       > img,
       > .image-embed {
