@@ -77,8 +77,8 @@ body:not(.block-width-off) {
   // Bases
   &:is(.bases-wide, .bases-max, .bases-100),
   div:is(.bases-wide, .bases-max, .bases-100) {
-    .markdown-preview-sizer > .el-pre .bases-embed,
-    .markdown-preview-sizer > .el-p .bases-embed,
+    .markdown-preview-sizer > .el-pre > .bases-embed,
+    .markdown-preview-sizer > .el-p > p > .bases-embed,
     .cm-content > .bases-embed,
     .cm-content > .cm-lang-base {
       max-width: var(--bases-line-max-width) !important;
