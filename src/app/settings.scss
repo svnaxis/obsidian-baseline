@@ -209,7 +209,7 @@ body:not(.is-phone) {
     .setting-page-titlebar {
       height: fit-content;
       width: fit-content;
-      padding: 12px;
+      padding: 12px !important;
       z-index: 1;
     }
   }
