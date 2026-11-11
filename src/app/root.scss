@@ -148,10 +148,10 @@ body,
   --code-tag: #7ee787;
   --code-value: #b5cea8;
 
-  --color-base-00: #161616 !important;
+  --color-base-00: #161616;
   --color-base-05: #171717;
-  --color-base-10: #181818 !important;
-  --color-base-20: #1c1c1c !important;
+  --color-base-10: #181818;
+  --color-base-20: #1c1c1c;
   --color-base-25: #222222;
   --color-base-30: #292929;
   --color-base-35: #303030;
@@ -166,6 +166,12 @@ body,
   --shadow-s: 0 0 0 var(--border-width) hsl(0 0% 100% / 0.07), 0 8px 24px hsl(0 0% 0% / 0.1), 0 8px 8px hsl(0 0% 0% / 0.1), 0 4px 12px -4px hsl(0 0% 0% / 0.35);
   --shadow-l:
     0 0 0 var(--border-width) hsl(0 0% 100% / 0.07), 0 1px 2px -1px hsl(0 0% 0% / 0.1), 0 2px 4px hsl(0 0% 0% / 0.1), 0px 12px 24px -16px hsl(0 0% 15% / 0.35);
+
+  &.is-mobile {
+    --color-base-00: #161616;
+    --color-base-10: #181818;
+    --color-base-20: #1c1c1c;
+  }
 }
 
 body:not(.is-mobile) {
