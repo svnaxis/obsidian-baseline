@@ -7257,7 +7257,7 @@ body.baseline-support-off .style-settings-container .setting-item-heading[data-i
   .markdown-source-view {
     color: var(--text-editor, var(--text-normal));
   }
-  .markdown-source-view:not(.is-live-preview) {
+  .markdown-source-view {
     --p-spacing-empty: 0;
   }
   .markdown-rendered h1 + :not(hr),
@@ -7562,20 +7562,20 @@ body.baseline-support-off .style-settings-container .setting-item-heading[data-i
   body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .markdown-preview-sizer iframe,
   body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .markdown-preview-sizer video,
   body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .markdown-preview-sizer img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt=banner]),
-  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-content .image-embed:not([width]),
-  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-content .image-embed:not([width]) > .image-wrapper,
-  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-content iframe,
-  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-content video,
-  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-content img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt=banner]) {
+  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer .image-embed:not([width]),
+  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer .image-embed:not([width]) > .image-wrapper,
+  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer iframe,
+  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer video,
+  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt=banner]) {
     width: 100%;
     padding: 0;
   }
   body:is(.media-width-full, :not(.css-settings-manager)) .markdown-preview-sizer iframe,
   body:is(.media-width-full, :not(.css-settings-manager)) .markdown-preview-sizer video,
   body:is(.media-width-full, :not(.css-settings-manager)) .markdown-preview-sizer img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt=banner]),
-  body:is(.media-width-full, :not(.css-settings-manager)) .cm-content iframe,
-  body:is(.media-width-full, :not(.css-settings-manager)) .cm-content video,
-  body:is(.media-width-full, :not(.css-settings-manager)) .cm-content img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt=banner]) {
+  body:is(.media-width-full, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer iframe,
+  body:is(.media-width-full, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer video,
+  body:is(.media-width-full, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt=banner]) {
     background: var(--background-primary-alt);
     max-height: 75vh;
     object-fit: contain;
