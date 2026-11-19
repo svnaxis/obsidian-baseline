@@ -444,7 +444,7 @@
   }
 
   body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .markdown-preview-sizer,
-  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-content {
+  body:is(.media-width-full, .media-width-full-always, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer {
     .image-embed:not([width]),
     .image-embed:not([width]) > .image-wrapper,
     iframe,
@@ -455,7 +455,7 @@
     }
   }
   body:is(.media-width-full, :not(.css-settings-manager)) .markdown-preview-sizer,
-  body:is(.media-width-full, :not(.css-settings-manager)) .cm-content {
+  body:is(.media-width-full, :not(.css-settings-manager)) .cm-editor > .cm-scroller > .cm-sizer {
     iframe,
     video,
     img:not([width], .link-favicon, .emoji, .highlight-swatch, [alt="banner"]) {
