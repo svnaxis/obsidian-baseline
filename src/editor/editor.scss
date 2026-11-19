@@ -92,7 +92,7 @@
   .markdown-source-view {
     color: var(--text-editor, var(--text-normal));
   }
-  .markdown-source-view:not(.is-live-preview) {
+  .markdown-source-view {
     --p-spacing-empty: 0;
   }
 
